@@ -21,11 +21,11 @@ const navBarItems = [
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu className="bg-zinc-800 w-full">
-      <NavigationMenuList className="p-4">
+      <NavigationMenuList className="px-4 pt-6 pb-1">
         {navBarItems.map((item) => (
-          <NavigationMenuItem key={item.id}>
+          <NavigationMenuItem key={item.id} className="relative">
             <Link href={item.href} legacyBehavior passHref>
-              <NavigationMenuLink className="inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white transition-colors hover:text-zinc-400/30">
+              <NavigationMenuLink className="inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md hover:border-b-2 hover:border-white font-bold text-white">
                 {item.name}
               </NavigationMenuLink>
             </Link>
