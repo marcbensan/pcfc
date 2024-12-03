@@ -1,0 +1,274 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavigationMenuDemo Component > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        aria-label="Main"
+        class="relative z-10 flex-1 items-center justify-center bg-zinc-800 w-full hidden md:flex"
+        data-orientation="horizontal"
+        dir="ltr"
+      >
+        <div
+          style="position: relative;"
+        >
+          <ul
+            class="group flex flex-1 list-none items-center justify-center space-x-1 px-4 pt-6 pb-1"
+            data-orientation="horizontal"
+            dir="ltr"
+          >
+            <li
+              class="relative"
+            >
+              <a
+                class="border-b-4 border-white 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+                data-radix-collection-item=""
+                href="/"
+              >
+                About
+              </a>
+            </li>
+            <li
+              class="relative"
+            >
+              <a
+                class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+                data-radix-collection-item=""
+                href="/sermons"
+              >
+                Sermons
+              </a>
+            </li>
+            <li
+              class="relative"
+            >
+              <a
+                class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+                data-radix-collection-item=""
+                href="/ministries"
+              >
+                Ministries
+              </a>
+            </li>
+            <li
+              class="relative"
+            >
+              <a
+                class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+                data-radix-collection-item=""
+                href="/contact"
+              >
+                Contact
+              </a>
+            </li>
+            <li
+              class="relative"
+            >
+              <a
+                class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+                data-radix-collection-item=""
+                href="/giving"
+              >
+                Giving
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="absolute left-0 top-full flex justify-center"
+        />
+      </nav>
+      <div
+        class="bg-zinc-800 w-full py-3 md:hidden"
+      >
+        <svg
+          aria-controls="radix-:r6:"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-hidden="true"
+          class="size-10 text-white pl-4"
+          data-slot="icon"
+          data-state="closed"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          type="button"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.75 9h16.5m-16.5 6.75h16.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      aria-label="Main"
+      class="relative z-10 flex-1 items-center justify-center bg-zinc-800 w-full hidden md:flex"
+      data-orientation="horizontal"
+      dir="ltr"
+    >
+      <div
+        style="position: relative;"
+      >
+        <ul
+          class="group flex flex-1 list-none items-center justify-center space-x-1 px-4 pt-6 pb-1"
+          data-orientation="horizontal"
+          dir="ltr"
+        >
+          <li
+            class="relative"
+          >
+            <a
+              class="border-b-4 border-white 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+              data-radix-collection-item=""
+              href="/"
+            >
+              About
+            </a>
+          </li>
+          <li
+            class="relative"
+          >
+            <a
+              class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+              data-radix-collection-item=""
+              href="/sermons"
+            >
+              Sermons
+            </a>
+          </li>
+          <li
+            class="relative"
+          >
+            <a
+              class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+              data-radix-collection-item=""
+              href="/ministries"
+            >
+              Ministries
+            </a>
+          </li>
+          <li
+            class="relative"
+          >
+            <a
+              class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+              data-radix-collection-item=""
+              href="/contact"
+            >
+              Contact
+            </a>
+          </li>
+          <li
+            class="relative"
+          >
+            <a
+              class="hover:border-b-2 hover:border-white/80 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
+              data-radix-collection-item=""
+              href="/giving"
+            >
+              Giving
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="absolute left-0 top-full flex justify-center"
+      />
+    </nav>
+    <div
+      class="bg-zinc-800 w-full py-3 md:hidden"
+    >
+      <svg
+        aria-controls="radix-:r6:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        aria-hidden="true"
+        class="size-10 text-white pl-4"
+        data-slot="icon"
+        data-state="closed"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        type="button"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3.75 9h16.5m-16.5 6.75h16.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

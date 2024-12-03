@@ -1,127 +1,104 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
+import { MenuItem } from "@/lib/types/navbar";
+import { Bars2Icon } from "@heroicons/react/24/outline";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
+import { cn } from "@/lib/utils";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Collapsible } from "@/components/ui/collapsible";
+
+const navBarItems: MenuItem[] = [
+  { name: "About", href: "/" },
+  { name: "Sermons", href: "/sermons" },
+  { name: "Ministries", href: "/ministries" },
+  { name: "Contact", href: "/contact" },
+  { name: "Giving", href: "/giving" },
 ];
 
-export function NavigationMenuDemo() {
+export function NavigationMenuDemo(): JSX.Element {
+  const [selectedItem, setSelectedItem] = useState<MenuItem>(navBarItems[0]);
+
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+    <>
+      {/* DESKTOP VIEW */}
+      <NavigationMenu className="bg-zinc-800 w-full hidden md:flex">
+        <NavigationMenuList className="px-4 pt-6 pb-1">
+          {navBarItems.map((item) => (
+            <NavigationMenuItem key={item.name} className="relative">
+              <Link href={item.href} legacyBehavior passHref>
+                <NavigationMenuLink
+                  onClick={() => setSelectedItem(item)}
+                  className={`${selectedItem === item ? "border-b-4 border-white" : "hover:border-b-2 hover:border-white/80"} 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white`}
                 >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+                  {item.name}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          ))}
+        </NavigationMenuList>
+      </NavigationMenu>
+
+      {/* MOBILE VIEW */}
+      <HamburgerMenu />
+    </>
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+function HamburgerMenu(): JSX.Element {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
+    <div className="bg-zinc-800 w-full py-3 md:hidden">
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild>
+          <Bars2Icon className="size-10 text-white pl-4" />
+        </SheetTrigger>
+        <SheetContent side="left" className="w-[240px] sm:w-[300px]">
+          <SheetTitle className="sr-only">Accessible Title</SheetTitle>
+          <nav className="flex flex-col space-y-3 pt-4">
+            {navBarItems.map((item) => (
+              <MenuItemComponent key={item.name} item={item} />
+            ))}
+          </nav>
+        </SheetContent>
+      </Sheet>
+    </div>
   );
-});
-ListItem.displayName = "ListItem";
+}
+
+function MenuItemComponent({
+  item,
+}: Readonly<{ item: MenuItem }>): JSX.Element {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+      <Link href={item.href} legacyBehavior passHref>
+        <Button
+          variant="ghost"
+          onClick={() => setIsOpen(false)}
+          className={cn(
+            "flex w-full items-center justify-between py-2 text-md font-bold transition-colors hover:text-primary"
+          )}
+        >
+          {item.name}
+        </Button>
+      </Link>
+    </Collapsible>
+  );
+}
