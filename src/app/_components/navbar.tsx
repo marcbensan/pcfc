@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
 import { MenuItem } from "@/lib/types/navbar";
 import { Bars2Icon } from "@heroicons/react/24/outline";
@@ -23,22 +22,29 @@ import { useState } from "react";
 import { Collapsible } from "@/components/ui/collapsible";
 
 const navBarItems: MenuItem[] = [
-  { name: "About", href: "/about" },
+  { name: "About", href: "/" },
   { name: "Sermons", href: "/sermons" },
   { name: "Ministries", href: "/ministries" },
   { name: "Contact", href: "/contact" },
   { name: "Giving", href: "/giving" },
 ];
 
-export function NavigationMenuDemo() {
+export function NavigationMenuDemo(): JSX.Element {
+  const [selectedItem, setSelectedItem] = useState<MenuItem>(navBarItems[0]);
+
   return (
     <>
+      {/* DESKTOP VIEW */}
       <NavigationMenu className="bg-zinc-800 w-full hidden md:flex">
         <NavigationMenuList className="px-4 pt-6 pb-1">
           {navBarItems.map((item) => (
             <NavigationMenuItem key={item.name} className="relative">
               <Link href={item.href} legacyBehavior passHref>
-                <NavigationMenuLink className="inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md hover:border-b-2 hover:border-white font-bold text-white">
+                <NavigationMenuLink
+                  onClick={() => setSelectedItem(item)}
+                  className={`${selectedItem === item ? "border-b-4 border-white" : "hover:border-b-2 hover:border-white/80"} 
+                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white`}
+                >
                   {item.name}
                 </NavigationMenuLink>
               </Link>
@@ -54,11 +60,11 @@ export function NavigationMenuDemo() {
 }
 
 function HamburgerMenu(): JSX.Element {
-  const [open, setOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <div className="bg-zinc-800 w-full py-3 md:hidden">
-      <Sheet open={open} onOpenChange={setOpen}>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Bars2Icon className="size-10 text-white pl-4" />
         </SheetTrigger>
@@ -82,9 +88,10 @@ function MenuItemComponent({
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <Link href={item.href}>
+      <Link href={item.href} legacyBehavior passHref>
         <Button
           variant="ghost"
+          onClick={() => setIsOpen(false)}
           className={cn(
             "flex w-full items-center justify-between py-2 text-md font-bold transition-colors hover:text-primary"
           )}
