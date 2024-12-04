@@ -35,13 +35,13 @@ export default function NavigationMenu({
   return (
     <StackedLayout
       navbar={
-        <Navbar className="flex space-between">
+        <Navbar className="space-between flex">
           <Link href="/" className="max-lg:hidden">
             <Image
               alt="PCFC Logo"
-              className="m-2"
-              width={24}
-              height={24}
+              className="m-4"
+              width={40}
+              height={40}
               src="/logo-white.png"
             />
           </Link>
@@ -58,7 +58,6 @@ export default function NavigationMenu({
               </NavbarItem>
             ))}
           </NavbarSection>
-  
         </Navbar>
       }
       sidebar={

@@ -5,218 +5,280 @@ exports[`NavigationMenuDemo Component > should match snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <nav
-        aria-label="Main"
-        class="relative z-10 flex-1 items-center justify-center bg-zinc-800 w-full hidden md:flex"
-        data-orientation="horizontal"
-        dir="ltr"
+      <div
+        class="relative isolate z-10 flex min-h-svh w-full flex-col bg-white dark:bg-zinc-900 lg:bg-zinc-100 dark:lg:bg-zinc-950"
       >
-        <div
-          style="position: relative;"
+        <header
+          class="flex items-center bg-zinc-800"
         >
-          <ul
-            class="group flex flex-1 list-none items-center justify-center space-x-1 px-4 pt-6 pb-1"
-            data-orientation="horizontal"
-            dir="ltr"
+          <div
+            class="py-2.5 lg:hidden"
           >
-            <li
+            <span
               class="relative"
             >
+              <button
+                aria-label="Open navigation"
+                class="cursor-default relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                data-headlessui-state=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                />
+                <svg
+                  aria-hidden="true"
+                  data-slot="icon"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M2 6.75C2 6.33579 2.33579 6 2.75 6H17.25C17.6642 6 18 6.33579 18 6.75C18 7.16421 17.6642 7.5 17.25 7.5H2.75C2.33579 7.5 2 7.16421 2 6.75ZM2 13.25C2 12.8358 2.33579 12.5 2.75 12.5H17.25C17.6642 12.5 18 12.8358 18 13.25C18 13.6642 17.6642 14 17.25 14H2.75C2.33579 14 2 13.6642 2 13.25Z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div
+            class="min-w-0 flex-1"
+          >
+            <nav
+              class="space-between flex flex flex-1 items-center gap-4 py-2.5 pl-2 pr-4"
+            >
               <a
-                class="border-b-4 border-white 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-                data-radix-collection-item=""
+                class="max-lg:hidden"
                 href="/"
               >
-                About
+                <img
+                  alt="PCFC Logo"
+                  class="m-4"
+                  data-nimg="1"
+                  decoding="async"
+                  height="40"
+                  loading="lazy"
+                  src="/_next/image?url=%2Flogo-white.png&w=96&q=75"
+                  srcset="/_next/image?url=%2Flogo-white.png&w=48&q=75 1x, /_next/image?url=%2Flogo-white.png&w=96&q=75 2x"
+                  style="color: transparent;"
+                  width="40"
+                />
               </a>
-            </li>
-            <li
-              class="relative"
-            >
-              <a
-                class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-                data-radix-collection-item=""
-                href="/sermons"
+              <div
+                aria-hidden="true"
+                class="-ml-4 flex-1"
+              />
+              <div
+                class="max-lg:hidden flex items-center gap-3"
               >
-                Sermons
-              </a>
-            </li>
-            <li
-              class="relative"
-            >
-              <a
-                class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-                data-radix-collection-item=""
-                href="/ministries"
-              >
-                Ministries
-              </a>
-            </li>
-            <li
-              class="relative"
-            >
-              <a
-                class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-                data-radix-collection-item=""
-                href="/contact"
-              >
-                Contact
-              </a>
-            </li>
-            <li
-              class="relative"
-            >
-              <a
-                class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-                data-radix-collection-item=""
-                href="/giving"
-              >
-                Giving
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="absolute left-0 top-full flex justify-center"
-        />
-      </nav>
-      <div
-        class="bg-zinc-800 w-full py-3 md:hidden"
-      >
-        <svg
-          aria-controls="radix-:r6:"
-          aria-expanded="false"
-          aria-haspopup="dialog"
-          aria-hidden="true"
-          class="size-10 text-white pl-4"
-          data-slot="icon"
-          data-state="closed"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          type="button"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="text-white relative"
+                >
+                  <a
+                    class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                    data-current="false"
+                    href="/sermons"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                    />
+                    Sermons
+                  </a>
+                </span>
+                <span
+                  class="text-white relative"
+                >
+                  <a
+                    class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                    data-current="false"
+                    href="/ministries"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                    />
+                    Ministries
+                  </a>
+                </span>
+                <span
+                  class="text-white relative"
+                >
+                  <a
+                    class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                    data-current="false"
+                    href="/contact"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                    />
+                    Contact
+                  </a>
+                </span>
+                <span
+                  class="text-white relative"
+                >
+                  <a
+                    class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                    data-current="false"
+                    href="/giving"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                    />
+                    Giving
+                  </a>
+                </span>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <main
+          class="flex flex-1 flex-col"
         >
-          <path
-            d="M3.75 9h16.5m-16.5 6.75h16.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <div>
+            test
+          </div>
+        </main>
       </div>
     </div>
   </body>,
   "container": <div>
-    <nav
-      aria-label="Main"
-      class="relative z-10 flex-1 items-center justify-center bg-zinc-800 w-full hidden md:flex"
-      data-orientation="horizontal"
-      dir="ltr"
+    <div
+      class="relative isolate z-10 flex min-h-svh w-full flex-col bg-white dark:bg-zinc-900 lg:bg-zinc-100 dark:lg:bg-zinc-950"
     >
-      <div
-        style="position: relative;"
+      <header
+        class="flex items-center bg-zinc-800"
       >
-        <ul
-          class="group flex flex-1 list-none items-center justify-center space-x-1 px-4 pt-6 pb-1"
-          data-orientation="horizontal"
-          dir="ltr"
+        <div
+          class="py-2.5 lg:hidden"
         >
-          <li
+          <span
             class="relative"
           >
+            <button
+              aria-label="Open navigation"
+              class="cursor-default relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+              data-headlessui-state=""
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+              />
+              <svg
+                aria-hidden="true"
+                data-slot="icon"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2 6.75C2 6.33579 2.33579 6 2.75 6H17.25C17.6642 6 18 6.33579 18 6.75C18 7.16421 17.6642 7.5 17.25 7.5H2.75C2.33579 7.5 2 7.16421 2 6.75ZM2 13.25C2 12.8358 2.33579 12.5 2.75 12.5H17.25C17.6642 12.5 18 12.8358 18 13.25C18 13.6642 17.6642 14 17.25 14H2.75C2.33579 14 2 13.6642 2 13.25Z"
+                />
+              </svg>
+            </button>
+          </span>
+        </div>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <nav
+            class="space-between flex flex flex-1 items-center gap-4 py-2.5 pl-2 pr-4"
+          >
             <a
-              class="border-b-4 border-white 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-              data-radix-collection-item=""
+              class="max-lg:hidden"
               href="/"
             >
-              About
+              <img
+                alt="PCFC Logo"
+                class="m-4"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Flogo-white.png&w=96&q=75"
+                srcset="/_next/image?url=%2Flogo-white.png&w=48&q=75 1x, /_next/image?url=%2Flogo-white.png&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
             </a>
-          </li>
-          <li
-            class="relative"
-          >
-            <a
-              class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-              data-radix-collection-item=""
-              href="/sermons"
+            <div
+              aria-hidden="true"
+              class="-ml-4 flex-1"
+            />
+            <div
+              class="max-lg:hidden flex items-center gap-3"
             >
-              Sermons
-            </a>
-          </li>
-          <li
-            class="relative"
-          >
-            <a
-              class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-              data-radix-collection-item=""
-              href="/ministries"
-            >
-              Ministries
-            </a>
-          </li>
-          <li
-            class="relative"
-          >
-            <a
-              class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-              data-radix-collection-item=""
-              href="/contact"
-            >
-              Contact
-            </a>
-          </li>
-          <li
-            class="relative"
-          >
-            <a
-              class="hover:border-b-2 hover:border-white/80 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white"
-              data-radix-collection-item=""
-              href="/giving"
-            >
-              Giving
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div
-        class="absolute left-0 top-full flex justify-center"
-      />
-    </nav>
-    <div
-      class="bg-zinc-800 w-full py-3 md:hidden"
-    >
-      <svg
-        aria-controls="radix-:r6:"
-        aria-expanded="false"
-        aria-haspopup="dialog"
-        aria-hidden="true"
-        class="size-10 text-white pl-4"
-        data-slot="icon"
-        data-state="closed"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        type="button"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="text-white relative"
+              >
+                <a
+                  class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                  data-current="false"
+                  href="/sermons"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                  />
+                  Sermons
+                </a>
+              </span>
+              <span
+                class="text-white relative"
+              >
+                <a
+                  class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                  data-current="false"
+                  href="/ministries"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                  />
+                  Ministries
+                </a>
+              </span>
+              <span
+                class="text-white relative"
+              >
+                <a
+                  class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                  data-current="false"
+                  href="/contact"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                  />
+                  Contact
+                </a>
+              </span>
+              <span
+                class="text-white relative"
+              >
+                <a
+                  class="relative flex min-w-0 items-center gap-3 rounded-lg p-2 text-left text-base/6 font-medium text-white sm:text-sm/5 data-[slot=icon]:*:size-6 data-[slot=icon]:*:shrink-0 data-[slot=icon]:*:fill-zinc-500 sm:data-[slot=icon]:*:size-5 data-[slot=icon]:last:[&:not(:nth-child(2))]:*:ml-auto data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-5 sm:data-[slot=icon]:last:[&:not(:nth-child(2))]:*:size-4 data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6 data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200 data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950"
+                  data-current="false"
+                  href="/giving"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+                  />
+                  Giving
+                </a>
+              </span>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main
+        class="flex flex-1 flex-col"
       >
-        <path
-          d="M3.75 9h16.5m-16.5 6.75h16.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+        <div>
+          test
+        </div>
+      </main>
     </div>
   </div>,
   "debug": [Function],
