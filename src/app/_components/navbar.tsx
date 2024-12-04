@@ -1,104 +1,82 @@
 "use client";
 
-import Link from "next/link";
+import {
+  Navbar,
+  NavbarItem,
+  NavbarSection,
+  NavbarSpacer,
+} from "@/components/navbar-catalyst";
+import {
+  Sidebar,
+  SidebarBody,
+  SidebarHeader,
+  SidebarItem,
+  SidebarSection,
+} from "@/components/sidebar-catalyst";
+import { StackedLayout } from "@/components/stacked-layout-catalyst";
 import { MenuItem } from "@/lib/types/navbar";
-import { Bars2Icon } from "@heroicons/react/24/outline";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-
-import { cn } from "@/lib/utils";
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Collapsible } from "@/components/ui/collapsible";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { PropsWithChildren, ReactNode } from "react";
 
 const navBarItems: MenuItem[] = [
-  { name: "About", href: "/" },
   { name: "Sermons", href: "/sermons" },
   { name: "Ministries", href: "/ministries" },
   { name: "Contact", href: "/contact" },
   { name: "Giving", href: "/giving" },
 ];
 
-export function NavigationMenuDemo(): JSX.Element {
-  const [selectedItem, setSelectedItem] = useState<MenuItem>(navBarItems[0]);
+export default function NavigationMenu({
+  children,
+}: PropsWithChildren<{ children: ReactNode }>) {
+  const currentUrl = usePathname();
 
   return (
-    <>
-      {/* DESKTOP VIEW */}
-      <NavigationMenu className="bg-zinc-800 w-full hidden md:flex">
-        <NavigationMenuList className="px-4 pt-6 pb-1">
-          {navBarItems.map((item) => (
-            <NavigationMenuItem key={item.name} className="relative">
-              <Link href={item.href} legacyBehavior passHref>
-                <NavigationMenuLink
-                  onClick={() => setSelectedItem(item)}
-                  className={`${selectedItem === item ? "border-b-4 border-white" : "hover:border-b-2 hover:border-white/80"} 
-                  inline-flex h-9 w-max items-center justify-center px-4 py-2 text-md font-bold text-white`}
-                >
-                  {item.name}
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          ))}
-        </NavigationMenuList>
-      </NavigationMenu>
-
-      {/* MOBILE VIEW */}
-      <HamburgerMenu />
-    </>
-  );
-}
-
-function HamburgerMenu(): JSX.Element {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  return (
-    <div className="bg-zinc-800 w-full py-3 md:hidden">
-      <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger asChild>
-          <Bars2Icon className="size-10 text-white pl-4" />
-        </SheetTrigger>
-        <SheetContent side="left" className="w-[240px] sm:w-[300px]">
-          <SheetTitle className="sr-only">Accessible Title</SheetTitle>
-          <nav className="flex flex-col space-y-3 pt-4">
-            {navBarItems.map((item) => (
-              <MenuItemComponent key={item.name} item={item} />
+    <StackedLayout
+      navbar={
+        <Navbar className="flex space-between">
+          <Link href="/" className="max-lg:hidden">
+            <Image
+              alt="PCFC Logo"
+              className="m-2"
+              width={24}
+              height={24}
+              src="/logo-white.png"
+            />
+          </Link>
+          <NavbarSpacer />
+          <NavbarSection className="max-lg:hidden">
+            {navBarItems.map(({ name, href }) => (
+              <NavbarItem
+                key={name}
+                href={href}
+                current={href === currentUrl}
+                className="text-white"
+              >
+                {name}
+              </NavbarItem>
             ))}
-          </nav>
-        </SheetContent>
-      </Sheet>
-    </div>
-  );
-}
-
-function MenuItemComponent({
-  item,
-}: Readonly<{ item: MenuItem }>): JSX.Element {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <Link href={item.href} legacyBehavior passHref>
-        <Button
-          variant="ghost"
-          onClick={() => setIsOpen(false)}
-          className={cn(
-            "flex w-full items-center justify-between py-2 text-md font-bold transition-colors hover:text-primary"
-          )}
-        >
-          {item.name}
-        </Button>
-      </Link>
-    </Collapsible>
+          </NavbarSection>
+  
+        </Navbar>
+      }
+      sidebar={
+        <Sidebar>
+          <SidebarHeader></SidebarHeader>
+          <SidebarBody>
+            <SidebarSection>
+              {navBarItems.map(({ name, href }) => (
+                <SidebarItem key={name} href={href}>
+                  {name}
+                </SidebarItem>
+              ))}
+            </SidebarSection>
+          </SidebarBody>
+        </Sidebar>
+      }
+    >
+      {children}
+    </StackedLayout>
   );
 }
