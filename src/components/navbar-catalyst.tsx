@@ -83,7 +83,7 @@ export const NavbarItem = forwardRef(function NavbarItem(
     // Avatar
     "data-[slot=avatar]:*:-m-0.5 data-[slot=avatar]:*:size-7 data-[slot=avatar]:*:[--avatar-radius:theme(borderRadius.DEFAULT)] data-[slot=avatar]:*:[--ring-opacity:10%] sm:data-[slot=avatar]:*:size-6",
     // Hover
-    "data-[hover]:bg-white data-[slot=icon]:*:data-[hover]:fill-zinc-200",
+    "data-[hover]:cursor-pointer data-[slot=icon]:*:data-[hover]:fill-zinc-200",
     // Active
     "data-[active]:bg-zinc-950/5 data-[slot=icon]:*:data-[active]:fill-zinc-950",
   );

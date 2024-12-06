@@ -21,6 +21,7 @@ import { usePathname } from "next/navigation";
 import { PropsWithChildren, ReactNode } from "react";
 
 const navBarItems: MenuItem[] = [
+  { name: "PCFC", href: "/" },
   { name: "Sermons", href: "/sermons" },
   { name: "Ministries", href: "/ministries" },
   { name: "Contact", href: "/contact" },

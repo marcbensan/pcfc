@@ -36,7 +36,7 @@ function MobileSidebar({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/30" />
+          <div className="fixed inset-0 z-10 bg-black/50" />
         </Headless.TransitionChild>
         <Headless.TransitionChild
           enter="ease-in-out duration-300"
@@ -46,8 +46,8 @@ function MobileSidebar({
           leaveFrom="translate-x-0"
           leaveTo="-translate-x-full"
         >
-          <Headless.DialogPanel className="fixed inset-y-0 w-full max-w-80 transition">
-            <div className="flex h-full flex-col bg-white shadow-sm ring-1 ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10">
+          <Headless.DialogPanel className="fixed inset-y-0 z-20 w-full max-w-80 transition">
+            <div className="flex h-full flex-col bg-zinc-950 shadow-sm ring-1 ring-zinc-950/5 dark:bg-zinc-900 dark:ring-white/10">
               <div className="-mb-3 px-4 pt-3">
                 <Headless.CloseButton
                   as={NavbarItem}
@@ -83,7 +83,7 @@ export function StackedLayout({
       </MobileSidebar>
 
       {/* Navbar */}
-      <header className="flex items-center bg-zinc-800">
+      <header className="flex items-center bg-zinc-900">
         <div className="py-2.5 lg:hidden">
           <NavbarItem
             onClick={() => setShowSidebar(true)}

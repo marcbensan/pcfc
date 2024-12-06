@@ -42,7 +42,7 @@ const styles = {
   ],
   outline: [
     // Base
-    "border-zinc-950/10 text-zinc-950 data-[active]:bg-zinc-950/[2.5%] data-[hover]:bg-zinc-950/[2.5%]",
+    "border-white border-2 text-white data-[active]:bg-zinc-950/[2.5%] data-[hover]:bg-white transition-colors duration-300 data-[hover]:text-zinc-900",
     // Dark mode
     "dark:border-white/15 dark:text-white dark:[--btn-bg:transparent] dark:data-[active]:bg-white/5 dark:data-[hover]:bg-white/5",
     // Icon
@@ -207,7 +207,7 @@ export function TouchTarget({ children }: { children: React.ReactNode }) {
   return (
     <>
       <span
-        className="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white [@media(pointer:fine)]:hidden"
+        className="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 text-white hover:cursor-pointer [@media(pointer:fine)]:hidden"
         aria-hidden="true"
       />
       {children}

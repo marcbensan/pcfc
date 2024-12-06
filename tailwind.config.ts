@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        orbitron: "'Orbitron', serif",
+      },
       backgroundImage: {
         ttuPattern: "url('/bg-img.jpg')",
       },
