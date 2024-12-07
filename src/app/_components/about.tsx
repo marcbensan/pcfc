@@ -3,7 +3,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 
 export default function About(): JSX.Element {
   return (
-    <>
+    <div className="space-y-20">
       {/* BG IMAGE */}
       <div className="h-screen bg-ttuPattern bg-cover bg-center bg-no-repeat">
         <div className="flex flex-col space-y-8 p-8">
@@ -34,6 +34,8 @@ export default function About(): JSX.Element {
           </div>
         </div>
       </div>
-    </>
+
+      <div className="diagonal-section my-20 h-[800px] bg-zinc-900"></div>
+    </div>
   );
 }

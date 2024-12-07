@@ -19,6 +19,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "codyhouse-framework": "^3.0.14",
     "framer-motion": "^11.13.1",
     "jsdom": "^25.0.1",
     "lucide-react": "^0.460.0",
