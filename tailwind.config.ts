@@ -11,9 +11,11 @@ export default {
     extend: {
       fontFamily: {
         orbitron: "'Orbitron', serif",
+        homenaje: "'Homenaje', serif",
       },
       backgroundImage: {
         ttuPattern: "url('/bg-img.jpg')",
+        quotes: "url('/quotes.jpg')",
       },
       colors: {
         background: "hsl(var(--background))",
