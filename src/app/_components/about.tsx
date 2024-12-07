@@ -1,12 +1,20 @@
 "use client";
 
 import { Button } from "@/components/button-catalyst";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { PlayIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 export default function About(): JSX.Element {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2,
   });
 
@@ -48,7 +56,46 @@ export default function About(): JSX.Element {
         </div>
       </div>
 
-      <div className="diagonal-section my-20 h-[800px] bg-zinc-900"></div>
+      {/* VISIT US */}
+      <section className="diagonal-section relative z-[1] h-[800px] bg-zinc-900">
+        <div className="mx-8 flex w-[calc(100%_-_3rem)] max-w-3xl flex-col space-y-8 pt-16">
+          <div
+            ref={ref}
+            className={`${inView && "animate-fadeUp"}`}
+            id="visit-us"
+          >
+            <p
+              className={`font-orbitron text-[24px] font-bold text-white md:text-[60px]`}
+            >
+              Visit PCFC
+            </p>
+            <p
+              className={`font-homenaje font-md text-[24px] text-white md:text-[24px]`}
+            >
+              Join us in one of our two services every Sunday
+            </p>
+          </div>
+          <div className="flex flex-row">
+            <Carousel className="ml-12 size-[400px]">
+              <CarouselContent>
+                <CarouselItem>
+                  <Image
+                    className="rounded-lg"
+                    alt="images"
+                    width={400}
+                    height={400}
+                    src="/quotes.jpg"
+                  />
+                </CarouselItem>
+                <CarouselItem>...</CarouselItem>
+                <CarouselItem>...</CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
