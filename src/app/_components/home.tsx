@@ -71,7 +71,7 @@ export default function About(): JSX.Element {
           </div>
 
           {/* WATCH LIVE BUTTON */}
-          <div className="order-3 flex flex-grow items-center justify-center md:order-2">
+          <div className="order-3 flex w-[400px] flex-grow items-center justify-center md:order-2">
             <Button className="w-full min-w-[150px] max-w-[300px] flex-grow cursor-pointer !p-3">
               <PlayIcon className="whitespace-nowrap font-homenaje text-white" />
               Watch Online
