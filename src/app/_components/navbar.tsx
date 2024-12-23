@@ -21,11 +21,11 @@ import { usePathname } from "next/navigation";
 import { PropsWithChildren, ReactNode } from "react";
 
 const navBarItems: MenuItem[] = [
-  { name: "PCFC", href: "/" },
-  { name: "Sermons", href: "/sermons" },
-  { name: "Ministries", href: "/ministries" },
-  { name: "Contact", href: "/contact" },
-  { name: "Giving", href: "/giving" },
+  { name: "HOME", href: "/" },
+  { name: "ABOUT", href: "/about" },
+  { name: "MINISTRIES", href: "/ministries" },
+  { name: "BE A PART", href: "/be-a-part" },
+  { name: "GIVING", href: "/giving" },
 ];
 
 export default function NavigationMenu({
@@ -38,13 +38,19 @@ export default function NavigationMenu({
       navbar={
         <Navbar className="space-between flex">
           <Link href="/" className="max-lg:hidden">
-            <Image
-              alt="PCFC Logo"
-              className="m-4"
-              width={40}
-              height={40}
-              src="/logo-white.png"
-            />
+            <div className="flex flex-row items-center">
+              <Image
+                alt="PCFC Logo"
+                className="m-4"
+                width={50}
+                height={50}
+                src="/logo-white.png"
+              />
+              <div className="flex flex-col font-monaSans font-bold text-white">
+                <p>PRAISE CHRISTIAN</p>
+                <p>FAMILY CHURCH</p>
+              </div>
+            </div>
           </Link>
           <NavbarSpacer />
           <NavbarSection className="max-lg:hidden">
@@ -53,7 +59,7 @@ export default function NavigationMenu({
                 key={name}
                 href={href}
                 current={href === currentUrl}
-                className="text-white"
+                className="font-monaSans font-bold text-white"
               >
                 {name}
               </NavbarItem>

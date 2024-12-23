@@ -10,12 +10,21 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        orbitron: "'Orbitron', serif",
+        monaSans: ["'Mona Sans'", "serif"],
         homenaje: "'Homenaje', serif",
       },
       backgroundImage: {
         ttuPattern: "url('/bg-img.jpg')",
         quotes: "url('/quotes.jpg')",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp 1s ease-out",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -24,6 +33,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        primarypcfc: "#072448",
+        secondarypcrfc: "#f1e3c1",
+        tertiarypcfc: "#efeee9",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
