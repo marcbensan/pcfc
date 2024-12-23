@@ -33,7 +33,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        primary1: "#072448",
+        primarypcfc: "#072448",
+        secondarypcrfc: "#f1e3c1",
+        tertiarypcfc: "#efeee9",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

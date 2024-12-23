@@ -83,7 +83,7 @@ export function StackedLayout({
       </MobileSidebar>
 
       {/* Navbar */}
-      <header className="bg-primary1 flex items-center">
+      <header className="bg-primarypcfc flex items-center">
         <div className="py-2.5 lg:hidden">
           <NavbarItem
             onClick={() => setShowSidebar(true)}

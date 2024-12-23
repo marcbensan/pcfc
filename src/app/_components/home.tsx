@@ -6,7 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { PlayIcon } from "@heroicons/react/24/solid";
+import { ClockIcon, MapPinIcon, PlayIcon } from "@heroicons/react/24/outline";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
@@ -41,19 +41,50 @@ export default function About(): JSX.Element {
   ];
 
   return (
-    <div className="space-y-20">
+    <div>
       {/* BG IMAGE */}
-      <div className="flex h-screen items-center justify-center bg-ttuPattern bg-cover bg-center bg-no-repeat opacity-90">
-        <div className="flex h-full max-w-[300px] animate-fadeUp flex-col items-center justify-center space-y-[-120px]">
-          <p className="font-monaSans max-w-[800px] whitespace-nowrap text-center text-[50px] font-bold text-white md:text-[200px]">
+      <div className="bg-cente flex h-screen items-center justify-center bg-ttuPattern bg-cover opacity-90 md:h-[800px]">
+        <div className="flex h-full animate-fadeUp flex-col items-center justify-center">
+          <p className="whitespace-nowrap text-center font-monaSans text-[80px] font-bold text-white md:text-[200px]">
             THIS IS
           </p>
-          <p className="font-monaSans max-w-[800px] text-center text-[50px] font-bold text-white md:text-[200px]">
+          <p className="mt-[-30] text-center font-monaSans text-[80px] font-bold text-white md:mt-[-120px] md:text-[200px]">
             FAMILY
           </p>
-          <p className="font-monaSans max-w-[800px] whitespace-nowrap pt-20 text-center text-[50px] font-bold italic text-white md:text-[100px]">
+          <p className="whitespace-nowrap text-center font-monaSans text-[30px] italic text-white md:text-[50px]">
             where you are loved
           </p>
+        </div>
+      </div>
+
+      {/* TIMES HERO */}
+      <div className="bg-tertiarypcfc flex h-full justify-center px-32">
+        <div className="flex flex-col space-y-8 py-8 font-monaSans md:max-w-[1000px] md:flex-row md:space-x-24 md:space-y-0">
+          {/* TIMES */}
+          <div className="flex flex-col items-center">
+            <ClockIcon className="size-20 text-black" />
+            <p className="whitespace-nowrap text-[24px] font-extrabold">
+              SERVICE TIMES
+            </p>
+            <p className="font-bold">10:00 AM</p>
+            <p className="font-bold">11:58 AM</p>
+          </div>
+
+          {/* WATCH LIVE BUTTON */}
+          <div className="order-3 flex flex-grow items-center justify-center md:order-2">
+            <Button className="w-full min-w-[150px] max-w-[300px] flex-grow cursor-pointer !p-3">
+              <PlayIcon className="whitespace-nowrap font-homenaje text-white" />
+              Watch Online
+            </Button>
+          </div>
+
+          {/* LOCATION */}
+          <div className="order-2 flex flex-col items-center md:order-3">
+            <MapPinIcon className="size-20 text-black" />
+            <p className="text-[24px] font-extrabold">OUR SITE</p>
+            <p className="whitespace-nowrap font-bold">781 WARDEN AVENUE</p>
+            <p className="whitespace-nowrap font-bold">SCARBOROUGH, ON</p>
+          </div>
         </div>
       </div>
 
