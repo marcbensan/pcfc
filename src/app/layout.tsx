@@ -23,9 +23,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
           rel="stylesheet"
         />
+
         {/* Normal font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

@@ -43,20 +43,17 @@ export default function About(): JSX.Element {
   return (
     <div className="space-y-20">
       {/* BG IMAGE */}
-      <div className="h-screen bg-ttuPattern bg-cover bg-center bg-no-repeat">
-        <div className="flex animate-fadeUp flex-col space-y-8 p-8">
-          <p className="w-3/4 max-w-[800px] font-orbitron text-[50px] font-bold text-white md:text-[70px]">
-            Praise Christian Family Church
+      <div className="flex h-screen items-center justify-center bg-ttuPattern bg-cover bg-center bg-no-repeat opacity-90">
+        <div className="flex h-full max-w-[300px] animate-fadeUp flex-col items-center justify-center space-y-[-120px]">
+          <p className="font-monaSans max-w-[800px] whitespace-nowrap text-center text-[50px] font-bold text-white md:text-[200px]">
+            THIS IS
           </p>
-          <div className="flex w-1/2 flex-col gap-y-4 md:w-full md:flex-row md:gap-x-4">
-            <Button outline className="cursor-pointer !p-3">
-              <PlayIcon className="font-homenaje text-white" />
-              Watch Online
-            </Button>
-            <Button color="white" className="w-36 cursor-pointer !p-3">
-              Visit Us
-            </Button>
-          </div>
+          <p className="font-monaSans max-w-[800px] text-center text-[50px] font-bold text-white md:text-[200px]">
+            FAMILY
+          </p>
+          <p className="font-monaSans max-w-[800px] whitespace-nowrap pt-20 text-center text-[50px] font-bold italic text-white md:text-[100px]">
+            where you are loved
+          </p>
         </div>
       </div>
 
@@ -99,7 +96,7 @@ export default function About(): JSX.Element {
           </div>
           <div className="flex flex-col md:flex-row">
             <Carousel
-              className="w-full md:size-[500px] drop-shadow-lg"
+              className="w-full drop-shadow-lg md:size-[500px]"
               plugins={[
                 Autoplay({
                   delay: 5000,
@@ -108,17 +105,15 @@ export default function About(): JSX.Element {
             >
               <CarouselContent>
                 {imageCarousel.map((image) => (
-                  <>
-                    <CarouselItem key={image.id}>
-                      <Image
-                        className="rounded-lg object-cover md:h-[400px]"
-                        alt="images"
-                        width={500}
-                        height={500}
-                        src={image.img}
-                      />
-                    </CarouselItem>
-                  </>
+                  <CarouselItem key={image.id}>
+                    <Image
+                      className="rounded-lg object-cover md:h-[400px]"
+                      alt="images"
+                      width={500}
+                      height={500}
+                      src={image.img}
+                    />
+                  </CarouselItem>
                 ))}
               </CarouselContent>
             </Carousel>
