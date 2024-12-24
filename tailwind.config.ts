@@ -76,7 +76,26 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      textStroke: {
+        "1": "1px",
+        "2": "2px",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-stroke-1": {
+          "-webkit-text-stroke": "1px",
+        },
+        ".text-stroke-2": {
+          "-webkit-text-stroke": "2px",
+        },
+        ".text-stroke-black": {
+          "-webkit-text-stroke-color": "black",
+        },
+      });
+    },
+  ],
 } satisfies Config;

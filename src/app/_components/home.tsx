@@ -20,35 +20,29 @@ export default function About(): JSX.Element {
   const imageCarousel = [
     {
       id: 1,
-      img: "/visit-carousel/1.jpg",
+      img: "/videos-carousel/1.jpg",
     },
     {
       id: 2,
-      img: "/visit-carousel/2.jpg",
+      img: "/videos-carousel/2.jpg",
     },
     {
       id: 3,
-      img: "/visit-carousel/3.jpg",
-    },
-    {
-      id: 4,
-      img: "/visit-carousel/4.jpg",
-    },
-    {
-      id: 5,
-      img: "/visit-carousel/5.jpg",
+      img: "/videos-carousel/3.jpg",
     },
   ];
 
   return (
     <div>
       {/* BG IMAGE */}
-      <div className="bg-cente flex h-screen items-center justify-center bg-ttuPattern bg-cover opacity-90 md:h-[800px]">
-        <div className="flex h-full animate-fadeUp flex-col items-center justify-center">
-          <p className="whitespace-nowrap text-center font-monaSans text-[80px] font-bold text-white md:text-[200px]">
+      <div className="relative flex h-screen items-center justify-center bg-ttuPattern bg-cover md:h-[800px]">
+        <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+        {/* Add this line */}
+        <div className="relative flex h-full animate-fadeUp flex-col items-center justify-center">
+          <p className="whitespace-nowrap text-center font-monaSans text-[80px] font-extrabold text-white md:text-[200px]">
             THIS IS
           </p>
-          <p className="text-[80 px] mt-[-30] text-center font-monaSans font-bold text-white md:mt-[-120px] md:text-[200px]">
+          <p className="mt-[-30] text-center font-monaSans text-[80px] font-extrabold text-white md:mt-[-120px] md:text-[200px]">
             FAMILY
           </p>
           <p className="whitespace-nowrap text-center font-monaSans text-[30px] italic text-white md:text-[50px]">
@@ -59,7 +53,7 @@ export default function About(): JSX.Element {
 
       {/* TIMES HERO */}
       <div className="flex h-full w-full justify-center bg-tertiarypcfc px-24">
-        <div className="flex w-full flex-col justify-between space-y-8 py-8 font-monaSans md:flex-row md:space-y-0">
+        <div className="flex w-full flex-col justify-between space-y-8 py-12 font-monaSans md:flex-row md:space-y-0">
           {/* TIMES */}
           <div className="flex flex-col items-center px-4 md:w-1/3">
             <ClockIcon className="size-20 text-black" />
@@ -72,15 +66,15 @@ export default function About(): JSX.Element {
 
           {/* WATCH LIVE BUTTON */}
           <div className="order-3 flex flex-grow items-center justify-center px-4 font-monaSans md:order-2 md:w-1/3">
-            <Button className="w-full min-w-[150px] max-w-[200px] flex-grow cursor-pointer !p-3">
+            <Button className="w-full min-w-[100px] max-w-[300px] flex-grow cursor-pointer !rounded-full !p-4">
               <PlayIcon className="whitespace-nowrap text-white" />
-              <p className="!font-monaSans">Watch Live Online</p>
+              <p className="whitespace-nowrap !font-monaSans">WATCH ONLINE</p>
             </Button>
           </div>
 
           {/* LOCATION */}
           <div className="order-2 flex flex-col items-center px-4 md:order-3 md:w-1/3">
-            <MapPinIcon className="size-20 text-black" />``
+            <MapPinIcon className="size-20 text-black" />
             <p className="text-[24px] font-extrabold">OUR SITE</p>
             <p className="whitespace-nowrap font-bold">781 WARDEN AVENUE</p>
             <p className="whitespace-nowrap font-bold">SCARBOROUGH, ON</p>
@@ -89,27 +83,40 @@ export default function About(): JSX.Element {
       </div>
 
       {/* VIDOES HERO */}
-      <div className="flex h-full w-full justify-center bg-primarypcfc px-24 py-32">
-        <p className="whitespace-nowrap text-2xl font-bold text-white">
+      <div className="flex h-full w-full flex-col justify-center space-y-16 bg-primarypcfc py-16">
+        <Carousel className="w-full">
+          <CarouselContent className="flex space-x-4">
+            {imageCarousel.map((image) => (
+              <CarouselItem
+                key={image.id}
+                className="pl-1 md:basis-1/2 lg:basis-1/3"
+              >
+                <Image
+                  alt="images"
+                  width={1000}
+                  height={1000}
+                  src={image.img}
+                  className="rounded-xl"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+        <p className="whitespace-nowrap text-center text-3xl font-bold text-white">
           WATCH OUR LATEST SERMONS
         </p>
       </div>
 
       {/* VISION HERO */}
-      <div className="h-full p-4 md:p-8">
-        <div className="flex items-center justify-center rounded-sm bg-quotes bg-cover drop-shadow-lg md:h-full md:rounded-2xl">
-          <div className="my-8 flex flex-col space-y-8 p-10 md:my-0 md:p-32 lg:p-52">
-            <p
-              ref={ref}
-              className={`${inView && "animate-fadeUp"} font-homenaje text-[24px] italic text-zinc-500 md:text-[40px]`}
-            >
-              {`For people to belong to a family, to grow in faith, and build God's kingdom, so that Jesus' name will reign above our city reaching all those in it.`}
-            </p>
-            <span className="w-3/4 flex-grow animate-fadeUp border-b-4 border-zinc-300" />
-            <p className="animate-fadeUp font-homenaje text-sm text-zinc-500">
-              The Vision
-            </p>
-          </div>
+      <div className="h-full bg-tertiarypcfc p-4 md:p-8">
+        <div className="flex flex-col items-center justify-center space-y-8">
+          <p className="text-stroke-2 text-stroke-black whitespace-nowrap text-center font-monaSans text-[60px] font-extrabold text-transparent md:text-[100px]">
+            OUR VISION
+          </p>
+          <p className="whitespace-nowrap text-center font-monaSans text-[24px] font-bold text-black md:text-[36px]">
+            To see every person in Scarborough and beyond experience the love of
+            Jesus
+          </p>
         </div>
       </div>
 
