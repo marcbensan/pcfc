@@ -48,7 +48,7 @@ export default function About(): JSX.Element {
           <p className="whitespace-nowrap text-center font-monaSans text-[80px] font-bold text-white md:text-[200px]">
             THIS IS
           </p>
-          <p className="mt-[-30] text-center font-monaSans text-[80px] font-bold text-white md:mt-[-120px] md:text-[200px]">
+          <p className="text-[80 px] mt-[-30] text-center font-monaSans font-bold text-white md:mt-[-120px] md:text-[200px]">
             FAMILY
           </p>
           <p className="whitespace-nowrap text-center font-monaSans text-[30px] italic text-white md:text-[50px]">
@@ -58,12 +58,12 @@ export default function About(): JSX.Element {
       </div>
 
       {/* TIMES HERO */}
-      <div className="bg-tertiarypcfc flex h-full justify-center px-32">
-        <div className="flex flex-col space-y-8 py-8 font-monaSans md:max-w-[1000px] md:flex-row md:space-x-24 md:space-y-0">
+      <div className="flex h-full w-full justify-center bg-tertiarypcfc px-24">
+        <div className="flex w-full flex-col justify-between space-y-8 py-8 font-monaSans md:flex-row md:space-y-0">
           {/* TIMES */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center px-4 md:w-1/3">
             <ClockIcon className="size-20 text-black" />
-            <p className="whitespace-nowrap text-[24px] font-extrabold">
+            <p className="whitespace-nowrap text-2xl font-extrabold">
               SERVICE TIMES
             </p>
             <p className="font-bold">10:00 AM</p>
@@ -71,21 +71,28 @@ export default function About(): JSX.Element {
           </div>
 
           {/* WATCH LIVE BUTTON */}
-          <div className="order-3 flex w-[400px] flex-grow items-center justify-center md:order-2">
-            <Button className="w-full min-w-[150px] max-w-[300px] flex-grow cursor-pointer !p-3">
-              <PlayIcon className="whitespace-nowrap font-homenaje text-white" />
-              Watch Online
+          <div className="order-3 flex flex-grow items-center justify-center px-4 font-monaSans md:order-2 md:w-1/3">
+            <Button className="w-full min-w-[150px] max-w-[200px] flex-grow cursor-pointer !p-3">
+              <PlayIcon className="whitespace-nowrap text-white" />
+              <p className="!font-monaSans">Watch Live Online</p>
             </Button>
           </div>
 
           {/* LOCATION */}
-          <div className="order-2 flex flex-col items-center md:order-3">
-            <MapPinIcon className="size-20 text-black" />
+          <div className="order-2 flex flex-col items-center px-4 md:order-3 md:w-1/3">
+            <MapPinIcon className="size-20 text-black" />``
             <p className="text-[24px] font-extrabold">OUR SITE</p>
             <p className="whitespace-nowrap font-bold">781 WARDEN AVENUE</p>
             <p className="whitespace-nowrap font-bold">SCARBOROUGH, ON</p>
           </div>
         </div>
+      </div>
+
+      {/* VIDOES HERO */}
+      <div className="flex h-full w-full justify-center bg-primarypcfc px-24 py-32">
+        <p className="whitespace-nowrap text-2xl font-bold text-white">
+          WATCH OUR LATEST SERMONS
+        </p>
       </div>
 
       {/* VISION HERO */}
