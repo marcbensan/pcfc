@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         monaSans: ["'Mona Sans'", "serif"],
         homenaje: "'Homenaje', serif",
+        barlow: "'Barlow', serif",
       },
       backgroundImage: {
         ttuPattern: "url('/bg-img.jpg')",
@@ -89,11 +90,11 @@ export default {
         ".text-stroke-1": {
           "-webkit-text-stroke": "1px",
         },
-        ".text-stroke-2": {
-          "-webkit-text-stroke": "2px",
+        ".text-stroke-4": {
+          "-webkit-text-stroke": "4px",
         },
         ".text-stroke-black": {
-          "-webkit-text-stroke-color": "black",
+          "-webkit-text-stroke-color": "#072448",
         },
       });
     },
