@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         monaSans: ["'Mona Sans'", "serif"],
         homenaje: "'Homenaje', serif",
+        barlow: "'Barlow', serif",
       },
       backgroundImage: {
         ttuPattern: "url('/bg-img.jpg')",
@@ -76,7 +77,26 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      textStroke: {
+        "1": "1px",
+        "2": "2px",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-stroke-1": {
+          "-webkit-text-stroke": "1px",
+        },
+        ".text-stroke-4": {
+          "-webkit-text-stroke": "4px",
+        },
+        ".text-stroke-black": {
+          "-webkit-text-stroke-color": "#072448",
+        },
+      });
+    },
+  ],
 } satisfies Config;

@@ -23,7 +23,7 @@ export function SidebarHeader({
       {...props}
       className={clsx(
         className,
-        "flex flex-col border-b border-zinc-900/70 p-4 dark:border-white/5 [&>[data-slot=section]+[data-slot=section]]:mt-2.5",
+        "flex flex-col border-b border-zinc-900/30 p-4 dark:border-white/5 [&>[data-slot=section]+[data-slot=section]]:mt-2.5",
       )}
     />
   );
@@ -85,7 +85,7 @@ export function SidebarDivider({
       {...props}
       className={clsx(
         className,
-        "my-4 border-t border-zinc-950/5 dark:border-white/5 lg:-mx-4",
+        "my-4 border-t border-primarypcfc/95 lg:-mx-4",
       )}
     />
   );
