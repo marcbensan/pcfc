@@ -1,11 +1,17 @@
 import { getYoutubeVideos } from "@/actions/youtube";
-import About from "./_components/home";
+import MainHero from "./_components/main-hero";
+import TimesHero from "./_components/times-hero";
+import VideosHero from "./_components/videos-hero";
+import VisionHero from "./_components/vision-hero";
 
 export default async function Home() {
-  const data = await getYoutubeVideos();
+  const youtubeVideos = await getYoutubeVideos();
   return (
     <>
-      <About videos={data} />
+      <MainHero />
+      <TimesHero />
+      <VideosHero videos={youtubeVideos} />
+      <VisionHero />
     </>
   );
 }

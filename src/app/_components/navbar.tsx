@@ -19,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren, ReactNode } from "react";
+import Footer from "./footer";
 
 const navBarItems: MenuItem[] = [
   { name: "HOME", href: "/" },
@@ -34,55 +35,58 @@ export default function NavigationMenu({
   const currentUrl = usePathname();
 
   return (
-    <StackedLayout
-      navbar={
-        <Navbar className="space-between flex">
-          <Link href="/" className="max-lg:hidden">
-            <div className="flex flex-row items-center">
-              <Image
-                alt="PCFC Logo"
-                className="m-4"
-                width={50}
-                height={50}
-                src="/logo-white.png"
-              />
-              <div className="flex flex-col font-monaSans font-bold text-white">
-                <p>PRAISE CHRISTIAN</p>
-                <p>FAMILY CHURCH</p>
+    <>
+      <StackedLayout
+        navbar={
+          <Navbar className="space-between flex">
+            <Link href="/" className="max-lg:hidden">
+              <div className="flex flex-row items-center">
+                <Image
+                  alt="PCFC Logo"
+                  className="m-4"
+                  width={50}
+                  height={50}
+                  src="/logo-white.png"
+                />
+                <div className="flex flex-col font-monaSans font-bold text-white">
+                  <p>PRAISE CHRISTIAN</p>
+                  <p>FAMILY CHURCH</p>
+                </div>
               </div>
-            </div>
-          </Link>
-          <NavbarSpacer />
-          <NavbarSection className="max-lg:hidden">
-            {navBarItems.map(({ name, href }) => (
-              <NavbarItem
-                key={name}
-                href={href}
-                current={href === currentUrl}
-                className="font-monaSans font-bold text-white"
-              >
-                {name}
-              </NavbarItem>
-            ))}
-          </NavbarSection>
-        </Navbar>
-      }
-      sidebar={
-        <Sidebar>
-          <SidebarHeader></SidebarHeader>
-          <SidebarBody>
-            <SidebarSection>
+            </Link>
+            <NavbarSpacer />
+            <NavbarSection className="max-lg:hidden">
               {navBarItems.map(({ name, href }) => (
-                <SidebarItem key={name} href={href}>
+                <NavbarItem
+                  key={name}
+                  href={href}
+                  current={href === currentUrl}
+                  className="font-monaSans font-bold text-white"
+                >
                   {name}
-                </SidebarItem>
+                </NavbarItem>
               ))}
-            </SidebarSection>
-          </SidebarBody>
-        </Sidebar>
-      }
-    >
-      {children}
-    </StackedLayout>
+            </NavbarSection>
+          </Navbar>
+        }
+        sidebar={
+          <Sidebar>
+            <SidebarHeader></SidebarHeader>
+            <SidebarBody>
+              <SidebarSection>
+                {navBarItems.map(({ name, href }) => (
+                  <SidebarItem key={name} href={href}>
+                    {name}
+                  </SidebarItem>
+                ))}
+              </SidebarSection>
+            </SidebarBody>
+          </Sidebar>
+        }
+      >
+        {children}
+      </StackedLayout>
+      <Footer />
+    </>
   );
 }
