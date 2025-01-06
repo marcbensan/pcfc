@@ -7,14 +7,9 @@ describe("NavigationMenuDemo Component", () => {
     cleanup();
   });
 
-  // it("should match snapshot", () => {
-  //   const page = render(<NavigationMenu>test</NavigationMenu>);
-  //   expect(page).toMatchSnapshot();
-  // });
-
   it("renders desktop navigation with correct items", () => {
     render(<NavigationMenu>test</NavigationMenu>);
-    const navItems = ["Sermons", "Ministries", "Contact", "Giving"];
+    const navItems = ["HOME", "ABOUT", "MINISTRIES", "BE A PART", "GIVING"];
     navItems.forEach((item) => {
       expect(screen.getByText(item)).toBeDefined();
     });
