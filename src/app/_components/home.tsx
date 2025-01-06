@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/button-catalyst";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -10,11 +9,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { ClockIcon, MapPinIcon, PlayIcon } from "@heroicons/react/24/outline";
 import Autoplay from "embla-carousel-autoplay";
-import { WrappedBuildError } from "next/dist/server/base-server";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
-export default function About(): JSX.Element {
+export default function About({
+  videos,
+}: Readonly<{ videos: YoutubeApiResponse }>): JSX.Element {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -35,25 +35,10 @@ export default function About(): JSX.Element {
     },
   ];
 
-  const imageCarousel = [
-    {
-      id: 1,
-      img: "/videos-carousel/1.jpg",
-    },
-    {
-      id: 2,
-      img: "/videos-carousel/2.jpg",
-    },
-    {
-      id: 3,
-      img: "/videos-carousel/3.jpg",
-    },
-  ];
-
   return (
     <>
       {/* BG IMAGE */}
-      <div className="relative flex h-screen items-center justify-center bg-ttuPattern bg-cover md:h-[800px]">
+      <div className="relative flex h-screen items-center justify-center bg-ttuPattern bg-cover md:h-[1000px]">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative flex h-full animate-fadeUp flex-col items-center justify-center">
           <p className="whitespace-nowrap text-center font-monaSans text-[80px] font-extrabold text-white md:text-[200px]">
@@ -107,7 +92,12 @@ export default function About(): JSX.Element {
 
           {/* WATCH LIVE BUTTON */}
           <div className="order-3 flex flex-grow items-center justify-center px-4 font-monaSans md:order-2 md:w-1/3">
-            <Button className="w-full min-w-[200px] max-w-[300px] flex-grow cursor-pointer !rounded-full !p-4">
+            <Button
+              href="https://www.youtube.com/@pcfc4square/streams"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full min-w-[200px] max-w-[300px] flex-grow cursor-pointer !rounded-full !p-4"
+            >
               <PlayIcon className="whitespace-nowrap text-white" />
               <p className="whitespace-nowrap !font-monaSans">WATCH ONLINE</p>
             </Button>
@@ -128,28 +118,27 @@ export default function About(): JSX.Element {
       {/* VIDOES HERO */}
 
       <div className="flex h-full w-full flex-col items-center justify-center space-y-8 bg-primarypcfc py-16 md:space-y-16">
-        <div className="max-w-screen-lg px-4 md:space-y-8">
-          <Image
-            alt="images"
-            width={1200}
-            height={1200}
-            src="/videos-carousel/2.jpg"
-            className="hidden rounded-xl md:block"
-          />
+        <div className="max-w-screen-2xl px-4 md:space-y-8">
           <Carousel className="w-full">
             <CarouselContent className="flex space-x-4">
-              {imageCarousel.map((image) => (
+              {videos.items.map((item) => (
                 <CarouselItem
-                  key={image.id}
+                  key={item.id}
                   className="md:basis-1/2 lg:basis-1/3"
                 >
-                  <Image
-                    alt="images"
-                    width={400}
-                    height={400}
-                    src={image.img}
-                    className="rounded-xl"
-                  />
+                  <a
+                    href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      alt="images"
+                      width={1000}
+                      height={480}
+                      src={`http://img.youtube.com/vi/${item.snippet.resourceId.videoId}/mqdefault.jpg`}
+                      className="rounded-xl"
+                    />
+                  </a>
                 </CarouselItem>
               ))}
             </CarouselContent>

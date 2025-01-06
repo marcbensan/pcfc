@@ -5,8 +5,7 @@ export default async function Home() {
   const data = await getYoutubeVideos();
   return (
     <>
-      <div>{data}</div>
-      <About />
+      <About videos={data} />
     </>
   );
 }
