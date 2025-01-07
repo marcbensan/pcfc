@@ -10,7 +10,7 @@ export default function Values(): JSX.Element {
     <section className="diagonal-section relative z-[1] bg-primarypcfc">
       <div className="mx-24 py-44">
         <p className="whitespace-nowrap text-center font-monaSans text-xl font-bold text-white md:text-8xl">
-          OUR VALUES
+          OUR VALUE
         </p>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
