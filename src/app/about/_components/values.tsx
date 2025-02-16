@@ -14,14 +14,14 @@ export default function Values(): JSX.Element {
           OUR VALUES
         </p>
         <div className="flex justify-center">
-          <Accordion type="single" collapsible className="w-[75%] text-white">
+          <Accordion type="single" collapsible className="w-[75%]">
             {values.map((value) => (
               <div key={value.title}>
                 <AccordionItem value={value.title}>
-                  <AccordionTrigger className="py-8 text-2xl font-bold">
+                  <AccordionTrigger className="py-8 font-barlow text-2xl font-bold text-white">
                     {value.title}
                   </AccordionTrigger>
-                  <AccordionContent className="text-xl">
+                  <AccordionContent className="font-barlow text-2xl text-white">
                     {value.description}
                   </AccordionContent>
                 </AccordionItem>
