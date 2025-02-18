@@ -9,28 +9,23 @@ export const teamMembers: TeamMember[] = [
   },
   {
     img: imgLink,
-    name: "Ritches Dolor",
-    position: "Connect Group Leader",
-  },
-  {
-    img: imgLink,
     name: "Nemie Dolor",
-    position: "Senior Pastor and Technical Leader",
+    position: "Associate Pastor",
   },
   {
     img: imgLink,
     name: "Gina Dolor",
-    position: "Ex-Lead Pastor",
+    position: "Founding Pastor",
   },
   {
     img: imgLink,
     name: "Gerry Kalaw",
-    position: "Pastor",
+    position: "Associate Pastor",
   },
   {
     img: imgLink,
     name: "Rose Carandang",
-    position: "Pastor",
+    position: "Associate Pastor and Church Admin",
   },
   {
     img: imgLink,
