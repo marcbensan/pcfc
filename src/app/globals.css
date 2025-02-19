@@ -80,7 +80,7 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 :root {
-  --diagonal-section-offset: 50px;
+  --diagonal-section-offset: 80px;
 }
 
 @supports ((-webkit-clip-path: inset(50%)) or (clip-path: inset(50%))) {

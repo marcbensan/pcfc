@@ -1,4 +1,4 @@
-const imgLink =
+export const imgLink =
   "https://conference.nbasbl.org/wp-content/uploads/2022/05/placeholder-image-1.png";
 
 export const teamMembers: TeamMember[] = [

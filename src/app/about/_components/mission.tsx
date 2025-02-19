@@ -8,14 +8,16 @@ export default function Mission(): JSX.Element {
           To see those that God loves, come back to His family
         </p>
       </div>
-      <div className="flex h-[250px] w-[250px] items-center justify-center overflow-hidden rounded-full md:h-[500px] md:w-[900px]">
-        <Image
-          alt="mission-img"
-          src="/mission.jpg"
-          width={1000}
-          height={1000}
-          className="h-full w-full object-cover"
-        />
+      <div>
+        <div className="flex h-[250px] w-[250px] items-center justify-center overflow-hidden rounded-full md:h-[600px] md:w-[600px]">
+          <Image
+            alt="mission-img"
+            src="/mission.jpg"
+            width={1000}
+            height={1000}
+            className="h-full w-full object-cover"
+          />
+        </div>
       </div>
     </div>
   );

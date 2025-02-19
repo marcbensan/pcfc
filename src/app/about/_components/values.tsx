@@ -9,8 +9,8 @@ import { values } from "@/lib/data/values";
 export default function Values(): JSX.Element {
   return (
     <section className="diagonal-section relative z-[1] bg-primarypcfc">
-      <div className="mx-24 space-y-16 py-44">
-        <p className="whitespace-nowrap text-center font-monaSans text-xl font-bold text-white md:text-8xl">
+      <div className="mx-4 space-y-16 py-44 md:mx-24">
+        <p className="text-center font-monaSans text-7xl font-bold text-white md:text-8xl">
           OUR VALUES
         </p>
         <div className="flex justify-center">
@@ -18,10 +18,10 @@ export default function Values(): JSX.Element {
             {values.map((value) => (
               <div key={value.title}>
                 <AccordionItem value={value.title}>
-                  <AccordionTrigger className="py-8 font-barlow text-2xl font-bold text-white">
+                  <AccordionTrigger className="py-8 font-barlow text-xl font-bold text-white md:text-2xl">
                     {value.title}
                   </AccordionTrigger>
-                  <AccordionContent className="font-barlow text-2xl text-white">
+                  <AccordionContent className="font-barlow text-lg text-white md:mt-4 md:text-xl">
                     {value.description}
                   </AccordionContent>
                 </AccordionItem>
