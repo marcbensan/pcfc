@@ -11,12 +11,12 @@ import Image from "next/image";
 
 export default function MeetTheTeam() {
   return (
-    <div className="mx-24 space-y-16 py-44">
-      <div className="flex flex-col items-center justify-center space-y-8">
-        <p className="whitespace-nowrap text-center font-monaSans text-xl font-bold md:text-8xl">
+    <div className="mx-8 space-y-8 py-44 md:mx-24 md:space-y-16">
+      <div className="flex flex-col items-center justify-center space-y-12">
+        <p className="text-center font-monaSans text-6xl font-bold md:text-8xl">
           MEET THE TEAM
         </p>
-        <p className="font-barlow text-2xl">
+        <p className="text-center font-barlow text-lg md:text-2xl">
           This is our amazing team members that makes PCFC great
         </p>
       </div>
