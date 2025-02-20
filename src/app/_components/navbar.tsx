@@ -24,9 +24,8 @@ import Footer from "./footer";
 const navBarItems: MenuItem[] = [
   { name: "HOME", href: "/" },
   { name: "ABOUT", href: "/about" },
-  { name: "MINISTRIES", href: "/ministries" },
-  { name: "BE A PART", href: "/be-a-part" },
-  { name: "GIVING", href: "/giving" },
+  { name: "NEXT STEPS", href: "/be-a-part" },
+  { name: "GIVE", href: "/giving" },
 ];
 
 export default function NavigationMenu({
