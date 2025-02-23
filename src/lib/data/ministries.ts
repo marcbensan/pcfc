@@ -1,5 +1,5 @@
 import {
-  ChatBubbleLeftEllipsisIcon,
+  ChatBubbleBottomCenterIcon,
   ClipboardIcon,
   FaceSmileIcon,
   HandRaisedIcon,
@@ -7,76 +7,69 @@ import {
   LockClosedIcon,
   MusicalNoteIcon,
   UserGroupIcon,
-  UsersIcon,
+  UserIcon,
   VideoCameraIcon,
 } from "@heroicons/react/24/outline";
 
-export const Ministries: Ministry[] = [
+export const ministries: Ministry[] = [
   {
     icon: MusicalNoteIcon,
     ministry: "Worship",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: UserGroupIcon,
     ministry: "Youth",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
-
   {
-    icon: UsersIcon,
+    icon: UserIcon,
     ministry: "Couples",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: VideoCameraIcon,
     ministry: "Production",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: ClipboardIcon,
     ministry: "Guest Experience",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: LinkIcon,
     ministry: "Connect Group",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: FaceSmileIcon,
     ministry: "Kids",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: HandRaisedIcon,
     ministry: "Praise Moves",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
-    icon: ChatBubbleLeftEllipsisIcon,
+    icon: ChatBubbleBottomCenterIcon,
     ministry: "Communications",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
   {
     icon: LockClosedIcon,
     ministry: "Security",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim, facere fuga inventore. Magni omnis animi cum quod placeat totam modi quasi obcaecati. Provident aperiam nesciunt a cupiditate!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
 ];
-
-type Ministry = {
-  icon: React.ComponentType;
-  ministry: string;
-  description: string;
-};
