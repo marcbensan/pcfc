@@ -5,7 +5,7 @@ export default function LeadPastor() {
   return (
     <section className="diagonal-section-bottom--flip-x diagonal-section-top--flip-x relative z-[1] bg-primarypcfc px-8 py-32">
       <div className="mx-4 space-y-16 py-44 md:mx-24 md:space-y-0">
-        <div className="flex flex-col space-y-24 md:flex-row md:space-x-24 md:space-y-0">
+        <div className="flex flex-col space-y-12 md:flex-row md:space-x-24 md:space-y-0">
           <Image
             alt="images"
             width={500}

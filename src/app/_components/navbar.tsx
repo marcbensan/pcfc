@@ -24,7 +24,7 @@ import Footer from "./footer";
 const navBarItems: MenuItem[] = [
   { name: "HOME", href: "/" },
   { name: "ABOUT", href: "/about" },
-  { name: "NEXT STEPS", href: "/be-a-part" },
+  { name: "NEXT STEPS", href: "/next-steps" },
   { name: "GIVE", href: "/giving" },
 ];
 
