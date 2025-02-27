@@ -3,12 +3,13 @@ import Image from "next/image";
 
 export default function Discipleship(): JSX.Element {
   return (
-    <div className="mx-4 space-y-32 px-24 py-32">
-      <p className="max-w-ffull text-end font-monaSans text-5xl font-bold md:text-8xl">
+    <div className="mx-4 space-y-16 py-32 md:space-y-24 md:px-24">
+      <p className="max-w-ffull font-monaSans text-5xl font-bold md:text-8xl">
         JOIN DISCIPLESHIP
       </p>
-      <div className="flex flex-row space-x-16">
+      <div className="flex flex-col space-x-16 md:flex-row">
         <div className="flex flex-col space-y-8 font-monaSans">
+          <Image width={1000} height={1000} alt="placeholder" src={imgLink} />
           <p className="text-2xl font-bold">OUR DISCIPLESHIP PROGRAM</p>
           <p className="font-barlow text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
@@ -27,7 +28,6 @@ export default function Discipleship(): JSX.Element {
             impedit consectetur, nobis ex cum sed aperiam. Voluptatum.
           </p>
         </div>
-        <Image width={1000} height={1000} alt="placeholder" src={imgLink} />
       </div>
     </div>
   );
