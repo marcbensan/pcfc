@@ -16,10 +16,10 @@ import { PropsWithChildren, ReactNode, useState } from "react";
 import Footer from "./footer";
 
 const navBarItems: MenuItemType[] = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about" },
-  { name: "NEXT STEPS", href: "/next-steps" },
-  { name: "GIVE", href: "/giving" },
+  { name: "HOME", href: "/", disable: true },
+  { name: "ABOUT", href: "/about", disable: false },
+  { name: "NEXT STEPS", href: "/next-steps", disable: false },
+  { name: "GIVE", href: "/giving", disable: true },
 ];
 
 export default function NavigationMenu({
@@ -29,8 +29,8 @@ export default function NavigationMenu({
     <>
       <StackedLayout
         navbar={
-          <div className="relative flex w-full items-center justify-center">
-            <Navbar className="top-2 sm:hidden lg:block" />
+          <div className="relative hidden w-full items-center justify-center lg:flex">
+            <Navbar className="top-2" />
           </div>
         }
         sidebar={
@@ -64,7 +64,12 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         {navBarItems.map((item) => (
           <Link key={item.name} href={item.href}>
-            <MenuItem setActive={setActive} active={active} item={item.name} />
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item={item.name}
+              disableHover={item.disable}
+            />
           </Link>
         ))}
       </Menu>

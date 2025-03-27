@@ -1,4 +1,5 @@
 "use client";
+import clsx from "clsx";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,17 +19,25 @@ export const MenuItem = ({
   active,
   item,
   children,
+  disableHover = false,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  disableHover?: boolean;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <div
+      onMouseEnter={() => !disableHover && setActive(item)}
+      className="relative"
+    >
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer font-bold text-white hover:opacity-[0.9] dark:text-white"
+        className={clsx(
+          "cursor-pointer font-bold text-white dark:text-white",
+          !disableHover && "hover:opacity-[0.9]",
+        )}
       >
         {item}
       </motion.p>
@@ -70,7 +79,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative flex justify-center space-x-4 rounded-full border border-transparent bg-primarypcfc px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black"
+      className="relative hidden justify-center space-x-4 rounded-full border border-gray-600 border-transparent bg-primarypcfc px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black lg:flex"
     >
       {children}
     </nav>

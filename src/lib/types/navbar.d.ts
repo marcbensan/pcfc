@@ -1,4 +1,5 @@
 export type MenuItemType = {
-    name: string;
-    href: string;
-}
+  name: string;
+  href: string;
+  disable: boolean;
+};
