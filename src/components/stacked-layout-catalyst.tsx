@@ -76,14 +76,14 @@ export function StackedLayout({
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <div className="relative isolate z-10 flex min-h-svh w-full flex-col bg-primarypcfc dark:lg:bg-zinc-950">
+    <div className="relative isolate z-10 flex min-h-svh w-full flex-col bg-tertiarypcfc dark:lg:bg-zinc-950">
       {/* Sidebar on mobile */}
       <MobileSidebar open={showSidebar} close={() => setShowSidebar(false)}>
         {sidebar}
       </MobileSidebar>
 
       {/* Navbar */}
-      <div className="py-2.5 lg:hidden">
+      <div className="bg-primarypcfc py-2.5 lg:hidden">
         <NavbarItem
           onClick={() => setShowSidebar(true)}
           aria-label="Open navigation"

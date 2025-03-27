@@ -35,7 +35,7 @@ export const MenuItem = ({
       <motion.p
         transition={{ duration: 0.3 }}
         className={clsx(
-          "cursor-pointer font-bold text-white dark:text-white",
+          "font-outline-2 cursor-pointer text-2xl font-bold text-white dark:text-white",
           !disableHover && "hover:opacity-[0.9]",
         )}
       >
@@ -52,7 +52,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-white shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
+                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-black shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
               >
                 <motion.div
                   layout // layout ensures smooth animation
@@ -79,7 +79,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative hidden justify-center space-x-4 rounded-full border border-gray-600 border-transparent bg-primarypcfc px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black lg:flex"
+      className="border-transparen5 relative hidden justify-center space-x-4 rounded-full bg-transparent px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black lg:flex"
     >
       {children}
     </nav>
@@ -110,13 +110,9 @@ export const ProductItem = ({
       )}
 
       <div>
-        <h4 className="mb-1 text-xl font-bold text-black dark:text-white">
-          {title}
-        </h4>
+        <h4 className="mb-1 text-xl font-bold text-white">{title}</h4>
         {description && (
-          <p className="max-w-[10rem] text-sm text-neutral-700 dark:text-neutral-300">
-            {description}
-          </p>
+          <p className="max-w-[10rem] text-sm text-gray-400">{description}</p>
         )}
       </div>
     </Link>
@@ -127,7 +123,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 hover:text-black dark:text-neutral-200"
+      className="font-bold text-white hover:text-gray-300 dark:text-neutral-200"
     >
       {children}
     </Link>
