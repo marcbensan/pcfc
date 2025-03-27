@@ -1,12 +1,6 @@
 "use client";
 
 import {
-  Navbar,
-  NavbarItem,
-  NavbarSection,
-  NavbarSpacer,
-} from "@/components/navbar-catalyst";
-import {
   Sidebar,
   SidebarBody,
   SidebarHeader,
@@ -14,14 +8,14 @@ import {
   SidebarSection,
 } from "@/components/sidebar-catalyst";
 import { StackedLayout } from "@/components/stacked-layout-catalyst";
-import { MenuItem } from "@/lib/types/navbar";
-import Image from "next/image";
+import { Menu, MenuItem } from "@/components/ui/navbar";
+import { MenuItemType } from "@/lib/types/navbar";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren, ReactNode, useState } from "react";
 import Footer from "./footer";
 
-const navBarItems: MenuItem[] = [
+const navBarItems: MenuItemType[] = [
   { name: "HOME", href: "/" },
   { name: "ABOUT", href: "/about" },
   { name: "NEXT STEPS", href: "/next-steps" },
@@ -31,42 +25,13 @@ const navBarItems: MenuItem[] = [
 export default function NavigationMenu({
   children,
 }: PropsWithChildren<{ children: ReactNode }>) {
-  const currentUrl = usePathname();
-
   return (
     <>
       <StackedLayout
         navbar={
-          <Navbar className="space-between flex">
-            <Link href="/" className="max-lg:hidden">
-              <div className="flex flex-row items-center">
-                <Image
-                  alt="PCFC Logo"
-                  className="m-4"
-                  width={50}
-                  height={50}
-                  src="/logo-white.png"
-                />
-                <div className="flex flex-col font-monaSans font-bold text-white">
-                  <p>PRAISE CHRISTIAN</p>
-                  <p>FAMILY CHURCH</p>
-                </div>
-              </div>
-            </Link>
-            <NavbarSpacer />
-            <NavbarSection className="max-lg:hidden">
-              {navBarItems.map(({ name, href }) => (
-                <NavbarItem
-                  key={name}
-                  href={href}
-                  current={href === currentUrl}
-                  className="font-monaSans font-bold text-white"
-                >
-                  {name}
-                </NavbarItem>
-              ))}
-            </NavbarSection>
-          </Navbar>
+          <div className="relative flex w-full items-center justify-center">
+            <Navbar className="top-2 sm:hidden lg:block" />
+          </div>
         }
         sidebar={
           <Sidebar>
@@ -87,5 +52,22 @@ export default function NavigationMenu({
       </StackedLayout>
       <Footer />
     </>
+  );
+}
+
+function Navbar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
+  return (
+    <div
+      className={cn("fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl", className)}
+    >
+      <Menu setActive={setActive}>
+        {navBarItems.map((item) => (
+          <Link key={item.name} href={item.href}>
+            <MenuItem setActive={setActive} active={active} item={item.name} />
+          </Link>
+        ))}
+      </Menu>
+    </div>
   );
 }
