@@ -9,7 +9,7 @@ export default function VideosHero({
   videos,
 }: Readonly<{ videos: YoutubeApiResponse }>): JSX.Element {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center space-y-8 bg-primarypcfc py-16 md:space-y-16">
+    <div className="flex h-auto w-full flex-col items-center justify-center space-y-8 bg-primarypcfc py-16 md:space-y-16">
       <div className="max-w-screen-2xl px-4 md:space-y-8">
         <Carousel className="w-full">
           <CarouselContent className="flex space-x-4">
@@ -25,7 +25,7 @@ export default function VideosHero({
                     width={1000}
                     height={480}
                     src={`http://img.youtube.com/vi/${item.snippet.resourceId.videoId}/mqdefault.jpg`}
-                    className="rounded-xl"
+                    className="rounded-3xl hover:opacity-80"
                   />
                 </a>
               </CarouselItem>
