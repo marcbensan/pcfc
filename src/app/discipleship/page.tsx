@@ -1,4 +1,4 @@
-import Discipleship from "../next-steps/_components/discipleship";
+import Discipleship from "./_components/discipleship";
 
 export default function DiscipleshipPage() {
   return <Discipleship />;

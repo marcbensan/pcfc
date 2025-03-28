@@ -1,4 +1,4 @@
-import Ministries from "../next-steps/_components/ministries";
+import Ministries from "./_components/ministries";
 
 export default function MinistryPage() {
   return <Ministries />;

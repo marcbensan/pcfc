@@ -1,4 +1,4 @@
-import ConnectGroup from "../next-steps/_components/connect-group";
+import ConnectGroup from "./_components/connect-group";
 
 export default function ConnectGroupPage() {
   return <ConnectGroup />;
