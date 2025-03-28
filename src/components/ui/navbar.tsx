@@ -35,7 +35,7 @@ export const MenuItem = ({
       <motion.p
         transition={{ duration: 0.3 }}
         className={clsx(
-          "font-outline-2 cursor-pointer text-2xl font-bold text-white dark:text-white",
+          "cursor-pointer font-monaSans text-lg font-bold text-white dark:text-white",
           !disableHover && "hover:opacity-[0.9]",
         )}
       >
@@ -48,11 +48,11 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute left-1/2 top-[calc(100%_+_1.2rem)] -translate-x-1/2 transform pt-4">
+            <div className="absolute left-1/2 top-[calc(100%_+_1.8rem)] -translate-x-1/2 transform pt-4">
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-black shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
+                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-tertiarypcfc shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
               >
                 <motion.div
                   layout // layout ensures smooth animation
@@ -79,7 +79,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="border-transparen5 relative hidden justify-center space-x-4 rounded-full bg-transparent px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black lg:flex"
+      className="hidden w-full space-x-12 border-b border-gray-800 bg-primarypcfc px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black lg:flex"
     >
       {children}
     </nav>
@@ -110,9 +110,9 @@ export const ProductItem = ({
       )}
 
       <div>
-        <h4 className="mb-1 text-xl font-bold text-white">{title}</h4>
+        <h4 className="mb-1 text-lg font-bold text-black">{title}</h4>
         {description && (
-          <p className="max-w-[10rem] text-sm text-gray-400">{description}</p>
+          <p className="max-w-[10rem] text-xs text-gray-600">{description}</p>
         )}
       </div>
     </Link>
@@ -123,7 +123,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="font-bold text-white hover:text-gray-300 dark:text-neutral-200"
+      className="font-bold text-black hover:text-zinc-600 dark:text-neutral-200"
     >
       {children}
     </Link>

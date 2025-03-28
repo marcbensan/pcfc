@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/navbar";
 import { MenuItemType } from "@/lib/types/navbar";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { PropsWithChildren, ReactNode, useState } from "react";
 import Footer from "./footer";
@@ -35,7 +36,7 @@ export default function NavigationMenu({
       <StackedLayout
         navbar={
           <div className="relative hidden w-full items-center justify-center lg:flex">
-            <Navbar className="top-2" />
+            <Navbar className="top-0" />
           </div>
         }
         sidebar={
@@ -63,61 +64,75 @@ export default function NavigationMenu({
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div
-      className={cn("fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl", className)}
-    >
+    <div className={cn("z-10 mx-auto w-full", className)}>
       <Menu setActive={setActive}>
-        <Link href="/">
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Home"
-            disableHover
-          />
-        </Link>
-        <MenuItem setActive={setActive} active={active} item="About">
-          <div className="flex w-40 flex-col space-y-4 text-sm">
-            <HoveredLink href="/about#mission">Mission</HoveredLink>
-            <HoveredLink href="/about#values">Values</HoveredLink>
-            <HoveredLink href="/about#lead-pastor">Leadership</HoveredLink>
-            <HoveredLink href="/about#meet-the-team">Our Team</HoveredLink>
+        <div className="flex w-full items-center justify-between">
+          <Link href="/" className="flex flex-row items-center">
+            <Image
+              alt="PCFC Logo"
+              className="mr-4"
+              width={50}
+              height={50}
+              src="/logo-white.png"
+            />
+            <div className="flex flex-col font-monaSans font-bold text-white">
+              <p>PRAISE CHRISTIAN</p>
+              <p>FAMILY CHURCH</p>
+            </div>
+          </Link>
+          <div className="flex flex-row items-center justify-end space-x-12">
+            <Link href="/">
+              <MenuItem
+                setActive={setActive}
+                active={active}
+                item="Home"
+                disableHover
+              />
+            </Link>
+            <MenuItem setActive={setActive} active={active} item="About">
+              <div className="flex w-40 flex-col space-y-4 py-2 pr-4 text-lg">
+                <HoveredLink href="/about#mission">Mission</HoveredLink>
+                <HoveredLink href="/about#values">Values</HoveredLink>
+                <HoveredLink href="/about#lead-pastor">Leadership</HoveredLink>
+                <HoveredLink href="/about#meet-the-team">Our Team</HoveredLink>
+              </div>
+            </MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Next Steps">
+              <div className="flex flex-col gap-4 p-2 text-sm">
+                <ProductItem
+                  title="Join a Ministry"
+                  href="/ministries"
+                  src="https://assets.aceternity.com/demos/algochurn.webp"
+                  description="Our ministries"
+                />
+                <ProductItem
+                  title="Join a Connect Group"
+                  href="/connect-group"
+                  src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                  description="This is connect group"
+                />
+                <ProductItem
+                  title="Join Discipleship"
+                  href="/discipleship"
+                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                  description="Join a discipleship"
+                />
+                <ProductItem
+                  title="Get Baptised"
+                  href="/baptism"
+                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                  description="This is baptism"
+                />
+              </div>
+            </MenuItem>
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item="Giving"
+              disableHover
+            />
           </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Next Steps">
-          <div className="grid grid-cols-2 gap-10 p-4 text-sm">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
-          </div>
-        </MenuItem>
-
-        <MenuItem
-          setActive={setActive}
-          active={active}
-          item="Giving"
-          disableHover
-        />
+        </div>
       </Menu>
     </div>
   );
