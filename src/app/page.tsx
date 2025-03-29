@@ -10,7 +10,7 @@ export default async function Home() {
     <>
       <MainHero />
       <TimesHero />
-      <VideosHero videos={youtubeVideos} />
+      {/* <VideosHero videos={youtubeVideos} /> */}
       <VisionHero />
     </>
   );
