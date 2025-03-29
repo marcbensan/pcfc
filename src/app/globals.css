@@ -7,6 +7,15 @@ body {
 }
 
 @layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 0.5px black;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px black;
+  }
+}
+
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;

@@ -8,7 +8,7 @@ import { values } from "@/lib/data/values";
 
 export default function Values(): JSX.Element {
   return (
-    <section className="diagonal-section relative z-[1] bg-primarypcfc">
+    <section className="diagonal-section-bottom relative z-[1] bg-primarypcfc">
       <div className="space-y-16 py-44 md:mx-24">
         <p className="text-center font-monaSans text-7xl font-bold text-white md:text-8xl">
           OUR VALUES

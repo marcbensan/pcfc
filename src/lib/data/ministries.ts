@@ -3,7 +3,6 @@ import {
   ClipboardIcon,
   FaceSmileIcon,
   HandRaisedIcon,
-  LinkIcon,
   LockClosedIcon,
   MusicalNoteIcon,
   UserGroupIcon,
@@ -42,12 +41,7 @@ export const ministries: Ministry[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
   },
-  {
-    icon: LinkIcon,
-    ministry: "Connect Group",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt est eius enim",
-  },
+
   {
     icon: FaceSmileIcon,
     ministry: "Kids",

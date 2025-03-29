@@ -92,6 +92,7 @@ export const NavbarItem = forwardRef(function NavbarItem(
     <span className={clsx(className, "relative")}>
       {current && (
         <motion.span
+          suppressHydrationWarning
           layoutId="current-indicator"
           className="absolute inset-x-1 -bottom-1 h-0.5 bg-white"
         />
