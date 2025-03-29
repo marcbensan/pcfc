@@ -33,6 +33,7 @@ export const MenuItem = ({
       className="relative"
     >
       <motion.p
+        suppressHydrationWarning
         transition={{ duration: 0.3 }}
         className={clsx(
           "cursor-pointer font-monaSans text-lg font-bold text-white dark:text-white",
@@ -43,6 +44,7 @@ export const MenuItem = ({
       </motion.p>
       {active !== null && (
         <motion.div
+          suppressContentEditableWarning
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
@@ -50,11 +52,13 @@ export const MenuItem = ({
           {active === item && (
             <div className="absolute left-1/2 top-[calc(100%_+_1.8rem)] -translate-x-1/2 transform pt-4">
               <motion.div
+                suppressHydrationWarning
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
                 className="overflow-hidden rounded-2xl border border-black/[0.2] bg-tertiarypcfc shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
               >
                 <motion.div
+                  suppressHydrationWarning
                   layout // layout ensures smooth animation
                   className="h-full w-max p-4"
                 >

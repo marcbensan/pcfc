@@ -3,31 +3,26 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Image from "next/image";
 
 export default function VideosHero({
   videos,
 }: Readonly<{ videos: YoutubeApiResponse }>): JSX.Element {
   return (
     <div className="flex h-auto w-full flex-col items-center justify-center space-y-8 bg-primarypcfc py-16 md:space-y-16">
-      <div className="max-w-screen-2xl px-4 md:space-y-8">
-        <Carousel className="w-full">
-          <CarouselContent className="flex space-x-4">
+      <div className="w-full md:space-y-8 lg:max-w-screen-2xl">
+        <Carousel className="w-full px-4">
+          <CarouselContent className="flex space-x-6 md:space-x-4">
             {videos.items.map((item) => (
-              <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                <a
-                  href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    alt="images"
-                    width={1000}
-                    height={480}
-                    src={`http://img.youtube.com/vi/${item.snippet.resourceId.videoId}/mqdefault.jpg`}
-                    className="rounded-3xl hover:opacity-80"
-                  />
-                </a>
+              <CarouselItem
+                key={item.id}
+                className="group/card text-bottom ml-1 h-[300px] w-[20px] rounded-lg bg-cover bg-center shadow-2xl hover:bg-gray-600 hover:opacity-70 md:h-[300px] md:w-[600px] md:basis-1/2 md:rounded-2xl lg:basis-1/3"
+                style={{
+                  backgroundImage: `url(http://img.youtube.com/vi/${item.snippet.resourceId.videoId}/hqdefault.jpg)`,
+                }}
+              >
+                <p className="z-10 line-clamp-1 p-2 pr-6 text-xl font-bold text-gray-50 md:text-2xl">
+                  {item.snippet.title}
+                </p>
               </CarouselItem>
             ))}
           </CarouselContent>

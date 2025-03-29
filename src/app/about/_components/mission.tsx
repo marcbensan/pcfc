@@ -1,24 +1,28 @@
-import Image from "next/image";
+"use client";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { motion } from "motion/react";
 
-export default function Mission(): JSX.Element {
+export default function Mission() {
   return (
-    <div className="my-24 flex flex-col-reverse items-center justify-center px-8 md:my-0 md:h-[1000px] md:flex-row md:space-x-24 md:px-24">
-      <div className="flex h-full w-full max-w-[1000px] animate-fadeUp items-center justify-center">
-        <p className="my-8 text-center font-barlow text-5xl font-bold italic text-black md:my-0 md:text-start md:text-8xl md:text-[80px]">
-          To see those that God loves, come back to His family
-        </p>
-      </div>
-      <div>
-        <div className="flex h-[250px] w-[250px] items-center justify-center overflow-hidden rounded-full md:h-[600px] md:w-[600px]">
-          <Image
-            alt="mission-img"
-            src="/mission.jpg"
-            width={1000}
-            height={1000}
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
+    <HeroHighlight>
+      <motion.h1
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        animate={{
+          opacity: 1,
+          y: [20, -5, 0],
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.4, 0.0, 0.2, 1],
+        }}
+        className="mx-auto max-w-4xl px-4 text-center font-barlow text-4xl font-bold leading-relaxed text-black dark:text-white md:px-24 md:text-4xl lg:px-4 lg:text-6xl lg:leading-snug"
+      >
+        To see those that God loves, come back to{" "}
+        <Highlight className="text-black dark:text-white">his family</Highlight>
+      </motion.h1>
+    </HeroHighlight>
   );
 }

@@ -54,7 +54,8 @@ export function ContainerTextFlip({
   }, [words, interval]);
 
   return (
-    <motion.p
+    <motion.div
+      suppressHydrationWarning
       layout
       layoutId={`words-here-${id}`}
       animate={{ width }}
@@ -70,6 +71,7 @@ export function ContainerTextFlip({
       key={words[currentWordIndex]}
     >
       <motion.div
+        suppressHydrationWarning
         transition={{
           duration: animationDuration / 1000,
           ease: "easeInOut",
@@ -78,7 +80,7 @@ export function ContainerTextFlip({
         ref={textRef}
         layoutId={`word-div-${words[currentWordIndex]}-${id}`}
       >
-        <motion.div className="inline-block">
+        <motion.div suppressHydrationWarning className="inline-block">
           {words[currentWordIndex].split("").map((letter, index) => (
             <motion.span
               key={index}
@@ -99,6 +101,6 @@ export function ContainerTextFlip({
           ))}
         </motion.div>
       </motion.div>
-    </motion.p>
+    </motion.div>
   );
 }
