@@ -8,12 +8,7 @@ import {
   SidebarSection,
 } from "@/components/sidebar-catalyst";
 import { StackedLayout } from "@/components/stacked-layout-catalyst";
-import {
-  HoveredLink,
-  Menu,
-  MenuItem,
-  ProductItem,
-} from "@/components/ui/navbar";
+import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar";
 import { MenuItemType } from "@/lib/types/navbar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -89,48 +84,35 @@ function Navbar({ className }: { className?: string }) {
                 disableHover
               />
             </Link>
-            <MenuItem setActive={setActive} active={active} item="About">
-              <div className="flex w-40 flex-col space-y-4 py-2 pr-4 text-lg">
-                <HoveredLink href="/about#mission">Mission</HoveredLink>
-                <HoveredLink href="/about#values">Values</HoveredLink>
-                <HoveredLink href="/about#lead-pastor">Leadership</HoveredLink>
-                <HoveredLink href="/about#meet-the-team">Our Team</HoveredLink>
-              </div>
-            </MenuItem>
+            <Link href="/about">
+              <MenuItem
+                setActive={setActive}
+                active={active}
+                item="About"
+                disableHover
+              />
+            </Link>
             <MenuItem setActive={setActive} active={active} item="Next Steps">
-              <div className="flex flex-col gap-4 p-2 text-sm">
-                <ProductItem
-                  title="Join a Ministry"
-                  href="/ministries"
-                  src="https://assets.aceternity.com/demos/algochurn.webp"
-                  description="Our ministries"
-                />
-                <ProductItem
-                  title="Join a Connect Group"
-                  href="/connect-group"
-                  src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                  description="This is connect group"
-                />
-                <ProductItem
-                  title="Join Discipleship"
-                  href="/discipleship"
-                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                  description="Join a discipleship"
-                />
-                <ProductItem
-                  title="Get Baptised"
-                  href="/baptism"
-                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-                  description="This is baptism"
-                />
+              <div className="flex w-auto flex-col space-y-4 py-2 pr-4 text-lg">
+                <HoveredLink href="/ministries">Join a Ministry</HoveredLink>
+                <hr />
+                <HoveredLink href="/connect-group">Connect Group</HoveredLink>
+                <hr />
+                <HoveredLink href="/discipleship">
+                  Join Discipleship
+                </HoveredLink>
+                <hr />
+                <HoveredLink href="/baptism">Get Baptised</HoveredLink>
               </div>
             </MenuItem>
-            <MenuItem
-              setActive={setActive}
-              active={active}
-              item="Giving"
-              disableHover
-            />
+            <Link href="/giving">
+              <MenuItem
+                setActive={setActive}
+                active={active}
+                item="Giving"
+                disableHover
+              />
+            </Link>
           </div>
         </div>
       </Menu>

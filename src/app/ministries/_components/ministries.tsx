@@ -47,10 +47,33 @@ export default function Ministries() {
       <p className="pb-12 text-center font-monaSans text-5xl font-bold md:text-8xl">
         OUR MINISTRIES
       </p>
-      <div className="flex flex-col space-y-32 px-4 md:px-12">
+      <div className="flex flex-col space-y-40 px-4 md:px-12">
+        {/* 3D COMPONENT */}
         <div className="my-10 flex w-full items-center justify-center rounded-3xl bg-tertiarypcfc p-2 ring-1 ring-tertiarypcfc dark:bg-neutral-800">
           <ThreeDMarquee images={images} />
         </div>
+        {/* TEXT */}
+        <div className="flex w-full flex-row items-center space-x-4 px-32 font-monaSans">
+          <p className="font-barlow text-7xl font-bold">FOR GOD.</p>
+          <p className="">
+            Praise Christian Family Church was born out of a deep desire to
+            build a local church that reflects the love and grace of Jesus
+            Christ. Rooted in a passion for community and discipleship, our
+            church exists to gather believers in worship and to equip them to
+            share His light and love with the world. We are a Christ-centered
+            church, committed to fostering a family of faith that grows
+            together, serves together, and shines His hope throughout our city
+            and beyond.
+          </p>
+        </div>
+        <div className="relative flex items-center py-5">
+          <div className="flex-grow border-4 border-t border-zinc-600"></div>
+          <p className="mx-8 flex-shrink text-center font-barlow text-4xl font-semibold md:text-7xl">
+            SOME MINISTRIES YOU CAN JOIN
+          </p>
+          <div className="flex-grow border-4 border-t border-zinc-600"></div>
+        </div>
+
         <div className="grid place-items-center gap-y-32 md:grid-cols-3 md:px-32">
           {ministries.map((ministry) => (
             <MinistryContainer

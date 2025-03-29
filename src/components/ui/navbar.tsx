@@ -55,7 +55,7 @@ export const MenuItem = ({
                 suppressHydrationWarning
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-tertiarypcfc shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
+                className="overflow-hidden rounded-2xl border border-black/[0.2] bg-white shadow-xl backdrop-blur-sm dark:border-white/[0.2] dark:bg-black"
               >
                 <motion.div
                   suppressHydrationWarning
