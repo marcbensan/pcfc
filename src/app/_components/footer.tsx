@@ -2,7 +2,7 @@ import { Input } from "@/components/ui/input";
 
 export default function Footer(): JSX.Element {
   return (
-    <div className="flex h-full w-full flex-col justify-center space-y-8 bg-primarypcfc py-16 md:space-y-16">
+    <div className="flex h-screen w-full flex-col justify-center space-y-8 bg-primarypcfc py-16 md:space-y-16">
       <p className="whitespace-nowrap text-center text-3xl font-bold text-white md:text-5xl">
         GET IN TOUCH
       </p>

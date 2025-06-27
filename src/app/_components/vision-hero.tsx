@@ -1,6 +1,6 @@
 export default function VisionHero(): JSX.Element {
   return (
-    <div className="h-full bg-tertiarypcfc px-6 py-16 md:p-20">
+    <div className="flex min-h-screen items-center bg-tertiarypcfc px-6 py-16 md:p-20">
       <div className="relative flex flex-col space-y-8 md:space-y-24">
         <div className="flex animate-fadeUp flex-col">
           <p className="text-center font-monaSans text-[80px] font-extrabold italic text-transparent text-stroke-4 text-stroke-black md:text-start md:text-[200px]">
