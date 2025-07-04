@@ -153,7 +153,7 @@ export default function MeetTheTeam() {
                           <div className="mx-auto h-px w-12 bg-primarypcfc transition-all duration-300 group-hover:w-20"></div>
                         </div>
 
-                        <div className="rounded-xl bg-secondarypcrfc p-3">
+                        <div className="bg-secondarypcfc rounded-xl p-3">
                           <p className="font-barlow text-lg font-semibold text-gray-700">
                             {member.position}
                           </p>

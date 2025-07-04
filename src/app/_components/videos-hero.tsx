@@ -125,7 +125,7 @@ export default function VideosHero({
           <Link
             href={"https://www.youtube.com/@pcfc4square"}
             target="_blank"
-            className="inline-flex items-center space-x-2 rounded-lg bg-white px-6 py-3 font-semibold text-primarypcfc shadow-lg transition-all duration-200 hover:scale-105 hover:bg-white/95 hover:shadow-xl"
+            className="bg-secondarypcfc inline-flex items-center space-x-2 rounded-lg px-6 py-3 font-semibold text-primarypcfc shadow-lg transition-all duration-200 hover:scale-105 hover:bg-white/95 hover:shadow-xl"
           >
             <span>View All Videos</span>
             <svg

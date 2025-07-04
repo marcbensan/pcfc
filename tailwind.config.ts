@@ -75,7 +75,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         primarypcfc: "#072448",
-        secondarypcrfc: "#f1e3c1",
+        secondarypcfc: "#f1e3c1",
         tertiarypcfc: "#efeee9",
         fourthpcfc: "#041327",
         popover: {

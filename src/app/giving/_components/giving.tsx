@@ -76,7 +76,7 @@ export default function Giving() {
                 href={
                   "https://www.paypal.com/donate?token=f0OAOWaYoK39VRd5DTmF78K5DcIMb6F4DFax1nO1ML4L1cs9tefDmyAi1PI-uVxxLJ96g6KsE2ME0Y5a"
                 }
-                className="rounded-xl bg-secondarypcrfc px-8 py-4 font-barlow text-lg font-bold text-primarypcfc transition-colors duration-300 hover:bg-secondarypcrfc/80"
+                className="bg-secondarypcfc hover:bg-secondarypcfc/80 rounded-xl px-8 py-4 font-barlow text-lg font-bold text-primarypcfc transition-colors duration-300"
               >
                 GIVE NOW
               </Link>
@@ -139,7 +139,7 @@ export default function Giving() {
           {/* Biblical Foundation */}
           <div className="rounded-xl bg-primarypcfc p-8 text-white md:p-16">
             <div className="mx-auto max-w-4xl space-y-8 text-center">
-              <Gift className="mx-auto h-16 w-16 text-secondarypcrfc" />
+              <Gift className="text-secondarypcfc mx-auto h-16 w-16" />
               <h3 className="font-barlow text-4xl font-bold">
                 BIBLICAL FOUNDATION
               </h3>
