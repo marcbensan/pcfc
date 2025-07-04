@@ -1,10 +1,13 @@
 "use client";
 
-import { ThreeDMarquee } from "@/components/ui/3d-hero";
 import { ministries } from "@/lib/data/ministries";
+import { useEffect, useRef, useState } from "react";
 import MinistryContainer from "./ministry-container";
 
 export default function Ministries() {
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const images = [
     "/ministries/_MG_6051.jpg",
     "/ministries/_MG_6060.jpg",
@@ -44,6 +47,20 @@ export default function Ministries() {
     "/ministries/IMG_5937.JPG",
     "/ministries/IMG_9426.jpg",
   ];
+
+  // Auto-cycle through images
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [images.length]);
+
   return (
     <>
       <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden px-8 md:px-0">
@@ -61,12 +78,23 @@ export default function Ministries() {
           </p>
         </div>
 
-        {/* overlay */}
+        {/* Background Image Cycling */}
+        <div className="absolute inset-0 h-full w-full">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                backgroundImage: `url(${image})`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Overlay */}
         <div className="absolute inset-0 h-full w-full bg-black/80 dark:bg-black/40" />
-        <ThreeDMarquee
-          className="pointer-events-none absolute inset-0 h-full w-full"
-          images={images}
-        />
       </div>
 
       <div className="py-24">

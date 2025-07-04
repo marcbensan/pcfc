@@ -96,7 +96,12 @@ function Navbar({ className }: { className?: string }) {
               <div className="z-50 flex w-auto flex-col space-y-4 py-2 pr-4 text-lg">
                 <HoveredLink href="/ministries">Join a Ministry</HoveredLink>
                 <hr />
-                <HoveredLink href="/connect-group">Connect Group</HoveredLink>
+                <HoveredLink
+                  href="https://pcfc-connect-group.vercel.app/"
+                  target="_blank"
+                >
+                  Connect Group
+                </HoveredLink>
                 <hr />
                 <HoveredLink href="/discipleship">
                   Join Discipleship
