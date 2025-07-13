@@ -4,28 +4,25 @@ import Image from "next/image";
 
 export default function LeadPastor() {
   return (
-    <section className="diagonal-section-bottom--flip-x diagonal-section-top--flip-x relative z-[1] overflow-hidden bg-primarypcfc py-24">
-      <div className="relative mx-4 space-y-16 py-32 md:mx-24 md:py-44">
-        <div className="flex flex-col items-center space-y-16 lg:flex-row lg:space-x-20 lg:space-y-0">
+    <section className="diagonal-section-bottom--flip-x diagonal-section-top--flip-x relative z-[1] overflow-hidden overflow-x-hidden bg-primarypcfc py-24">
+      <div className="mx-4 w-full py-32 md:mx-24 md:py-44">
+        <div className="flex w-full flex-col items-center space-y-16 lg:flex-row lg:space-x-12 lg:space-y-0">
           {/* Image Section */}
-          <div className="group relative flex-shrink-0">
-            <div className="absolute inset-0 rounded-xl bg-white/20"></div>
-            <div className="relative">
-              <Image
-                alt="Pastor Mark & Ritches Dolor"
-                width={500}
-                height={600}
-                src="/people/mark-cheng.jpg"
-                className="rounded-xl border-4 border-white/20 object-cover shadow-2xl lg:h-[35rem] lg:w-[28rem]"
-              />
-            </div>
+          <div className="flex w-full justify-center lg:w-1/2">
+            <Image
+              alt="Pastor Mark & Ritches Dolor"
+              width={400}
+              height={400}
+              src="/people/mark-cheng.jpg"
+              className="w-full max-w-xs rounded-xl border-4 border-white/20 object-cover shadow-2xl lg:max-w-none"
+            />
           </div>
 
           {/* Content Section */}
-          <div className="flex flex-col items-center space-y-10 text-center text-white lg:flex-1 lg:items-start lg:text-start">
+          <div className="flex w-full flex-col items-center space-y-10 text-center text-white lg:w-1/2 lg:items-start lg:text-start">
             {/* Header */}
             <div className="space-y-4">
-              <div className="flex items-center justify-center gap-3 lg:justify-start">
+              <div className="flex items-center justify-center lg:justify-start">
                 <div className="h-px w-12 bg-white/60"></div>
                 <p className="font-homenaje text-lg uppercase tracking-wider text-white/90 md:text-xl">
                   Our Leadership
@@ -33,7 +30,7 @@ export default function LeadPastor() {
                 <div className="h-px w-12 bg-white/60"></div>
               </div>
 
-              <h2 className="font-barlow text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+              <h2 className="font-barlow text-4xl font-bold leading-tight lg:text-6xl xl:text-7xl">
                 MARK & RITCHES
                 <br />
                 <span className="text-white">DOLOR</span>
@@ -44,9 +41,8 @@ export default function LeadPastor() {
               </p>
             </div>
 
-            {/* Description */}
-            <div className="max-w-2xl space-y-6">
-              <p className="font-barlow text-lg leading-relaxed text-white/90 md:text-xl">
+            <div className="space-y-6">
+              <p className="font-barlow text-lg text-white/90 md:text-xl">
                 Pastor Mark and Ritches have been faithfully serving our
                 community for almost two decades, bringing a heart for
                 transformation and a passion for God&apos;s word. Their ministry
@@ -63,7 +59,7 @@ export default function LeadPastor() {
             </div>
 
             {/* Quote */}
-            <blockquote className="relative max-w-2xl rounded-lg border-l-4 border-white/60 bg-white/5 p-6 backdrop-blur-sm">
+            <blockquote className="relative rounded-lg border-l-4 border-white/60 bg-white/5 p-6 backdrop-blur-sm">
               <div className="absolute left-2 top-2 font-serif text-4xl text-white/30">
                 &apos;
               </div>

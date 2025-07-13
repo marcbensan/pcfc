@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="font-caption bg-primarypcfc py-20 text-white">
-      <div className="container px-6 md:px-12">
+    <footer className="font-caption w-full bg-primarypcfc py-20 text-white">
+      <div className="px-6 md:px-12">
         {/* Top Section */}
         <div className="flex flex-col items-center justify-between space-y-8 md:flex-row md:space-y-0">
           <div className="space-y-4 text-center md:text-left">
