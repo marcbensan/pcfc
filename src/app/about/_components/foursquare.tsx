@@ -1,30 +1,7 @@
 import { Button } from "@/components/button-catalyst";
-import { ArrowRight, BookOpen, Globe, Heart, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Foursquare() {
-  const highlights = [
-    {
-      icon: <Heart className="h-6 w-6" />,
-      title: "Faith-Centered",
-      description: "Rooted in biblical principles and Christian values",
-    },
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Community Focused",
-      description: "Building meaningful connections and relationships",
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: "Global Impact",
-      description: "Making a difference in communities worldwide",
-    },
-    {
-      icon: <BookOpen className="h-6 w-6" />,
-      title: "Spirit-Led",
-      description: "Guided by the Holy Spirit in all we do",
-    },
-  ];
-
   return (
     <section className="relative overflow-hidden px-6 py-32 md:px-12 md:py-60">
       {/* Background decorative elements */}
@@ -51,31 +28,6 @@ export default function Foursquare() {
             community dedicated to spreading the Gospel and transforming lives
             around the world.
           </p>
-        </div>
-
-        {/* Highlights Grid */}
-        <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {highlights.map((highlight) => (
-            <div
-              key={highlight.title}
-              className="group relative rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              <div className="flex flex-col items-center space-y-4 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primarypcfc text-white transition-transform duration-300 group-hover:scale-110">
-                  {highlight.icon}
-                </div>
-                <h3 className="font-barlow text-lg font-bold text-gray-900">
-                  {highlight.title}
-                </h3>
-                <p className="font-barlow text-sm leading-relaxed text-gray-600">
-                  {highlight.description}
-                </p>
-              </div>
-
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-600/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-            </div>
-          ))}
         </div>
 
         {/* CTA Section */}

@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function LeadPastor() {
   return (
-    <section className="diagonal-section-bottom--flip-x diagonal-section-top--flip-x relative z-[1] overflow-hidden overflow-x-hidden bg-primarypcfc py-24">
-      <div className="mx-4 w-full py-32 md:mx-24 md:py-44">
+    <section className="diagonal-section-bottom--flip-x diagonal-section-top--flip-x relative z-[1] overflow-hidden bg-primarypcfc py-24">
+      <div className="w-full px-8 py-32 md:mx-24 md:py-44">
         <div className="flex w-full flex-col items-center space-y-16 lg:flex-row lg:space-x-12 lg:space-y-0">
           {/* Image Section */}
           <div className="flex w-full justify-center lg:w-1/2">
@@ -41,8 +41,8 @@ export default function LeadPastor() {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <p className="font-barlow text-lg text-white/90 md:text-xl">
+            <div className="text-md space-y-6">
+              <p className="font-barlow text-white/90 md:text-xl">
                 Pastor Mark and Ritches have been faithfully serving our
                 community for almost two decades, bringing a heart for
                 transformation and a passion for God&apos;s word. Their ministry
@@ -51,7 +51,7 @@ export default function LeadPastor() {
                 Gospel.
               </p>
 
-              <p className="font-barlow text-lg leading-relaxed text-white/80">
+              <p className="font-barlow leading-relaxed text-white/80">
                 Together, they lead with wisdom, compassion, and an unwavering
                 dedication to building a church family where everyone can grow
                 in their faith journey and discover their God-given purpose.
@@ -63,7 +63,7 @@ export default function LeadPastor() {
               <div className="absolute left-2 top-2 font-serif text-4xl text-white/30">
                 &apos;
               </div>
-              <p className="pl-6 font-barlow text-lg italic text-white/90">
+              <p className="pl-6 font-barlow italic text-white/90">
                 Our heart is to see every person discover their identity in
                 Christ and walk in the fullness of God&apos;s purpose for their
                 life.
