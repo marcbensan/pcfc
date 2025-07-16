@@ -5,21 +5,21 @@ import Image from "next/image";
 export default function LeadPastor() {
   return (
     <section className="diagonal-section-bottom--flip-x diagonal-section-top--flip-x relative z-[1] overflow-hidden bg-primarypcfc py-24">
-      <div className="w-full px-8 py-32 md:mx-24 md:py-44">
-        <div className="flex w-full flex-col items-center space-y-16 lg:flex-row lg:space-x-12 lg:space-y-0">
+      <div className="w-full px-8 py-32 md:py-44">
+        <div className="flex w-full flex-col space-y-16 md:flex-row md:space-x-8 md:space-y-0">
           {/* Image Section */}
-          <div className="flex w-full justify-center lg:w-1/2">
+          <div className="flex w-full justify-center md:w-1/2">
             <Image
               alt="Pastor Mark & Ritches Dolor"
-              width={400}
-              height={400}
+              width={800}
+              height={800}
               src="/people/mark-cheng.jpg"
-              className="w-full max-w-xs rounded-xl border-4 border-white/20 object-cover shadow-2xl lg:max-w-none"
+              className="w-full max-w-xs rounded-xl border-4 border-white/20 object-cover shadow-2xl lg:max-w-lg"
             />
           </div>
 
           {/* Content Section */}
-          <div className="flex w-full flex-col items-center space-y-10 text-center text-white lg:w-1/2 lg:items-start lg:text-start">
+          <div className="flex w-full flex-col items-center space-y-10 text-center text-white md:w-1/2 lg:items-start lg:text-start">
             {/* Header */}
             <div className="space-y-4">
               <div className="flex items-center justify-center lg:justify-start">
