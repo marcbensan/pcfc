@@ -3,7 +3,7 @@ import { ClockIcon, MapPinIcon, PlayIcon } from "@heroicons/react/24/outline";
 
 export default function TimesHero(): JSX.Element {
   return (
-    <div className="flex h-full w-full justify-center bg-tertiarypcfc px-24">
+    <div className="flex w-full justify-center bg-tertiarypcfc px-24">
       <div className="flex w-full flex-col justify-between space-y-8 py-12 font-monaSans md:flex-row md:space-y-0">
         {/* TIMES */}
         <div className="flex flex-col items-center px-4 md:w-1/3">

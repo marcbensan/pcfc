@@ -13,14 +13,14 @@ export default function AboutPage(): JSX.Element {
       <section id="values">
         <Values />
       </section>
-      <section id="foursquare">
-        <Foursquare />
+      <section id="meet-the-team">
+        <MeetTheTeam />
       </section>
       <section id="lead-pastor">
         <LeadPastor />
       </section>
-      <section id="meet-the-team">
-        <MeetTheTeam />
+      <section id="foursquare">
+        <Foursquare />
       </section>
     </>
   );

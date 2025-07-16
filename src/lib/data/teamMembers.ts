@@ -25,7 +25,7 @@ export const teamMembers: TeamMember[] = [
   {
     img: imgLink,
     name: "Rose Carandang",
-    position: "Associate Pastor and Church Admin",
+    position: "Associate Pastor",
   },
   {
     img: imgLink,

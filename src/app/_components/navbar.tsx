@@ -16,11 +16,18 @@ import Link from "next/link";
 import { PropsWithChildren, ReactNode, useState } from "react";
 import Footer from "./footer";
 
-const navBarItems: MenuItemType[] = [
-  { name: "HOME", href: "/", disable: true },
+const navbarItemsMobile: MenuItemType[] = [
+  { name: "HOME", href: "/", disable: false },
   { name: "ABOUT", href: "/about", disable: false },
-  { name: "NEXT STEPS", href: "/next-steps", disable: false },
-  { name: "GIVE", href: "/giving", disable: true },
+  { name: "MINISTRIES", href: "/ministries", disable: false },
+  {
+    name: "CONNECT GROUP",
+    href: "https://pcfc-connect-group.vercel.app/",
+    disable: false,
+  },
+  { name: "DISCIPLESHIP", href: "/discipleship", disable: false },
+  { name: "BAPTISM", href: "/baptism", disable: false },
+  { name: "GIVE", href: "/giving", disable: false },
 ];
 
 export default function NavigationMenu({
@@ -39,7 +46,7 @@ export default function NavigationMenu({
             <SidebarHeader></SidebarHeader>
             <SidebarBody>
               <SidebarSection>
-                {navBarItems.map(({ name, href }) => (
+                {navbarItemsMobile.map(({ name, href }) => (
                   <SidebarItem key={name} href={href}>
                     {name}
                   </SidebarItem>
@@ -93,10 +100,15 @@ function Navbar({ className }: { className?: string }) {
               />
             </Link>
             <MenuItem setActive={setActive} active={active} item="Next Steps">
-              <div className="flex w-auto flex-col space-y-4 py-2 pr-4 text-lg">
+              <div className="z-50 flex w-auto flex-col space-y-4 py-2 pr-4 text-lg">
                 <HoveredLink href="/ministries">Join a Ministry</HoveredLink>
                 <hr />
-                <HoveredLink href="/connect-group">Connect Group</HoveredLink>
+                <HoveredLink
+                  href="https://pcfc-connect-group.vercel.app/"
+                  target="_blank"
+                >
+                  Connect Group
+                </HoveredLink>
                 <hr />
                 <HoveredLink href="/discipleship">
                   Join Discipleship

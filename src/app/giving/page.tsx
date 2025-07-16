@@ -1,3 +1,5 @@
+import Giving from "./_components/giving";
+
 export default function GivingPage(): JSX.Element {
-  return <h2>Giving</h2>;
+  return <Giving />;
 }
