@@ -17,17 +17,17 @@ import { PropsWithChildren, ReactNode, useState } from "react";
 import Footer from "./footer";
 
 const navbarItemsMobile: MenuItemType[] = [
-  { name: "HOME", href: "/", disable: false },
-  { name: "ABOUT", href: "/about", disable: false },
-  { name: "MINISTRIES", href: "/ministries", disable: false },
+  { name: "Home", href: "/", disable: false },
+  { name: "About", href: "/about", disable: false },
+  { name: "Ministries", href: "/ministries", disable: false },
   {
-    name: "CONNECT GROUP",
+    name: "Connect Group",
     href: "https://pcfc-connect-group.vercel.app/",
     disable: false,
   },
-  { name: "DISCIPLESHIP", href: "/discipleship", disable: false },
-  { name: "BAPTISM", href: "/baptism", disable: false },
-  { name: "GIVE", href: "/giving", disable: false },
+  { name: "Discipleship", href: "/discipleship", disable: false },
+  { name: "Baptism", href: "/baptism", disable: false },
+  { name: "Give", href: "/giving", disable: false },
 ];
 
 export default function NavigationMenu({
@@ -37,7 +37,7 @@ export default function NavigationMenu({
     <>
       <StackedLayout
         navbar={
-          <div className="relative hidden w-full items-center justify-center lg:flex">
+          <div className="relative hidden w-full items-center justify-center text-white lg:flex">
             <Navbar className="top-0" />
           </div>
         }
@@ -47,7 +47,7 @@ export default function NavigationMenu({
             <SidebarBody>
               <SidebarSection>
                 {navbarItemsMobile.map(({ name, href }) => (
-                  <SidebarItem key={name} href={href}>
+                  <SidebarItem className="font-monaSans" key={name} href={href}>
                     {name}
                   </SidebarItem>
                 ))}

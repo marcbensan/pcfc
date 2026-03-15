@@ -53,7 +53,7 @@ export default function VideosHero({
         <div className="relative">
           <Carousel className="w-full">
             <CarouselContent className="-ml-4 md:-ml-6">
-              {videos.items.map((item) => (
+              {videos?.items?.map((item) => (
                 <CarouselItem
                   key={item.id}
                   className="cursor-pointer pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3"

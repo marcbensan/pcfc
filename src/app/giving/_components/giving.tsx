@@ -154,7 +154,7 @@ export default function Giving() {
           </div>
 
           {/* Contact Section */}
-          {/* <div className="rounded-2xl bg-white p-8 text-center shadow-lg md:p-12">
+          <div className="rounded-2xl bg-white p-8 text-center shadow-lg md:p-12">
             <h3 className="mb-6 font-barlow text-3xl font-bold text-gray-800">
               QUESTIONS ABOUT GIVING?
             </h3>
@@ -171,7 +171,7 @@ export default function Giving() {
                 Call (555) 123-4567
               </button>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </>
