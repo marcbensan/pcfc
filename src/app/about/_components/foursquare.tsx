@@ -1,4 +1,5 @@
 import { Button } from "@/components/button-catalyst";
+import { APP_STYLES } from "@/lib/styles/app-shared";
 import { ArrowRight } from "lucide-react";
 
 export default function Foursquare() {
@@ -23,7 +24,7 @@ export default function Foursquare() {
             </div>
           </div>
 
-          <p className="mx-auto max-w-3xl font-barlow text-lg leading-relaxed text-gray-600 md:text-xl">
+          <p className={APP_STYLES.sectionLead}>
             Discover the heart of our movement - a dynamic, Spirit-filled
             community dedicated to spreading the Gospel and transforming lives
             around the world.
@@ -33,9 +34,7 @@ export default function Foursquare() {
         {/* CTA Section */}
         <div className="space-y-8 text-center">
           <div className="space-y-4">
-            <h3 className="font-barlow text-2xl font-bold text-gray-800 md:text-3xl">
-              Ready to Learn More?
-            </h3>
+            <h3 className={APP_STYLES.sectionHeading}>Ready to Learn More?</h3>
             <p className="mx-auto max-w-xl font-barlow text-gray-600">
               Explore our core beliefs and discover what makes the Foursquare
               movement unique.

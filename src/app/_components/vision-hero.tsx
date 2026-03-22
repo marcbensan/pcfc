@@ -1,4 +1,4 @@
-export default function VisionHero(): JSX.Element {
+export default function VisionHero() {
   return (
     <div className="flex min-h-screen items-center bg-tertiarypcfc px-6 py-16 md:p-20">
       <div className="relative flex flex-col space-y-8 md:space-y-24">

@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { teamMembers } from "@/lib/data/teamMembers";
+import { APP_STYLES } from "@/lib/styles/app-shared";
 import Autoplay from "embla-carousel-autoplay";
 import { Award, Heart, Mail, Star, Users } from "lucide-react";
 import Image from "next/image";
@@ -153,7 +154,7 @@ export default function MeetTheTeam() {
                           <div className="mx-auto h-px w-12 bg-primarypcfc transition-all duration-300 group-hover:w-20"></div>
                         </div>
 
-                        <div className="bg-secondarypcfc rounded-xl p-3">
+                        <div className="rounded-xl bg-secondarypcfc p-3">
                           <p className="font-barlow text-lg font-semibold text-gray-700">
                             {member.position}
                           </p>
@@ -202,9 +203,7 @@ export default function MeetTheTeam() {
 
         {/* CTA Section */}
         <div className="space-y-6 pt-8 text-center">
-          <h3 className="font-barlow text-2xl font-bold text-gray-800 md:text-3xl">
-            Want to Join Our Team?
-          </h3>
+          <h3 className={APP_STYLES.sectionHeading}>Want to Join Our Team?</h3>
           <p className="mx-auto max-w-2xl font-barlow text-lg text-gray-600">
             {`We're always looking for passionate individuals who want to make a
             difference in our community.`}

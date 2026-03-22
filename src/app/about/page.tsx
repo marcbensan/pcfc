@@ -4,7 +4,7 @@ import MeetTheTeam from "./_components/meet-the-team";
 import Mission from "./_components/mission";
 import Values from "./_components/values";
 
-export default function AboutPage(): JSX.Element {
+export default function AboutPage() {
   return (
     <>
       <section id="mission">

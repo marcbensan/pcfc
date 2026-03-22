@@ -9,6 +9,7 @@ import {
 } from "@/components/sidebar-catalyst";
 import { StackedLayout } from "@/components/stacked-layout-catalyst";
 import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar";
+import { SITE_COPY } from "@/lib/constants/site-copy";
 import { MenuItemType } from "@/lib/types/navbar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -17,17 +18,17 @@ import { PropsWithChildren, ReactNode, useState } from "react";
 import Footer from "./footer";
 
 const navbarItemsMobile: MenuItemType[] = [
-  { name: "HOME", href: "/", disable: false },
-  { name: "ABOUT", href: "/about", disable: false },
-  { name: "MINISTRIES", href: "/ministries", disable: false },
+  { name: "Home", href: "/", disable: false },
+  { name: "About", href: "/about", disable: false },
+  { name: "Ministries", href: "/ministries", disable: false },
   {
-    name: "CONNECT GROUP",
+    name: SITE_COPY.nav.connectGroup,
     href: "https://pcfc-connect-group.vercel.app/",
     disable: false,
   },
-  { name: "DISCIPLESHIP", href: "/discipleship", disable: false },
-  { name: "BAPTISM", href: "/baptism", disable: false },
-  { name: "GIVE", href: "/giving", disable: false },
+  { name: "Discipleship", href: "/discipleship", disable: false },
+  { name: SITE_COPY.nav.getBaptized, href: "/baptism", disable: false },
+  { name: SITE_COPY.nav.giving, href: "/giving", disable: false },
 ];
 
 export default function NavigationMenu({
@@ -37,7 +38,7 @@ export default function NavigationMenu({
     <>
       <StackedLayout
         navbar={
-          <div className="relative hidden w-full items-center justify-center lg:flex">
+          <div className="relative hidden w-full items-center justify-center text-white lg:flex">
             <Navbar className="top-0" />
           </div>
         }
@@ -47,7 +48,7 @@ export default function NavigationMenu({
             <SidebarBody>
               <SidebarSection>
                 {navbarItemsMobile.map(({ name, href }) => (
-                  <SidebarItem key={name} href={href}>
+                  <SidebarItem className="font-monaSans" key={name} href={href}>
                     {name}
                   </SidebarItem>
                 ))}
@@ -78,8 +79,8 @@ function Navbar({ className }: { className?: string }) {
               src="/logo-white.png"
             />
             <div className="flex flex-col font-monaSans font-bold text-white">
-              <p>PRAISE CHRISTIAN</p>
-              <p>FAMILY CHURCH</p>
+              <p>{SITE_COPY.nav.churchNameLineOne}</p>
+              <p>{SITE_COPY.nav.churchNameLineTwo}</p>
             </div>
           </Link>
           <div className="flex flex-row items-center justify-end space-x-12">
@@ -99,22 +100,30 @@ function Navbar({ className }: { className?: string }) {
                 disableHover
               />
             </Link>
-            <MenuItem setActive={setActive} active={active} item="Next Steps">
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item={SITE_COPY.nav.nextSteps}
+            >
               <div className="z-50 flex w-auto flex-col space-y-4 py-2 pr-4 text-lg">
-                <HoveredLink href="/ministries">Join a Ministry</HoveredLink>
+                <HoveredLink href="/ministries">
+                  {SITE_COPY.nav.joinMinistry}
+                </HoveredLink>
                 <hr />
                 <HoveredLink
                   href="https://pcfc-connect-group.vercel.app/"
                   target="_blank"
                 >
-                  Connect Group
+                  {SITE_COPY.nav.connectGroup}
                 </HoveredLink>
                 <hr />
                 <HoveredLink href="/discipleship">
-                  Join Discipleship
+                  {SITE_COPY.nav.joinDiscipleship}
                 </HoveredLink>
                 <hr />
-                <HoveredLink href="/baptism">Get Baptised</HoveredLink>
+                <HoveredLink href="/baptism">
+                  {SITE_COPY.nav.getBaptized}
+                </HoveredLink>
               </div>
             </MenuItem>
             <Link href="/giving">

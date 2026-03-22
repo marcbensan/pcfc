@@ -8,13 +8,14 @@ import {
 } from "@/components/ui/carousel";
 
 import { CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { SITE_COPY } from "@/lib/constants/site-copy";
 import { Eye, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function VideosHero({
   videos,
-}: Readonly<{ videos: YoutubeApiResponse }>): JSX.Element {
+}: Readonly<{ videos: YoutubeApiResponse }>) {
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-US", {
       month: "short",
@@ -53,7 +54,7 @@ export default function VideosHero({
         <div className="relative">
           <Carousel className="w-full">
             <CarouselContent className="-ml-4 md:-ml-6">
-              {videos.items.map((item) => (
+              {videos?.items?.map((item) => (
                 <CarouselItem
                   key={item.id}
                   className="cursor-pointer pl-4 md:basis-1/2 md:pl-6 lg:basis-1/3"
@@ -103,7 +104,7 @@ export default function VideosHero({
 
                         {/* Watch Button */}
                         <Button className="mt-4 w-full rounded-lg bg-primarypcfc px-4 py-2 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-primarypcfc/90 hover:shadow-lg">
-                          Watch Video
+                          {SITE_COPY.cta.watchVideo}
                         </Button>
                       </div>
                     </div>
@@ -125,9 +126,9 @@ export default function VideosHero({
           <Link
             href={"https://www.youtube.com/@pcfc4square"}
             target="_blank"
-            className="bg-secondarypcfc inline-flex items-center space-x-2 rounded-lg px-6 py-3 font-semibold text-primarypcfc shadow-lg transition-all duration-200 hover:scale-105 hover:bg-white/95 hover:shadow-xl"
+            className="inline-flex items-center space-x-2 rounded-lg bg-secondarypcfc px-6 py-3 font-semibold text-primarypcfc shadow-lg transition-all duration-200 hover:scale-105 hover:bg-white/95 hover:shadow-xl"
           >
-            <span>View All Videos</span>
+            <span>{SITE_COPY.cta.viewAllVideos}</span>
             <svg
               className="h-5 w-5"
               fill="none"

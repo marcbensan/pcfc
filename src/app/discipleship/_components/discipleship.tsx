@@ -1,7 +1,9 @@
+import { SITE_COPY } from "@/lib/constants/site-copy";
 import { imgLink } from "@/lib/data/teamMembers";
+import { APP_STYLES } from "@/lib/styles/app-shared";
 import Image from "next/image";
 
-export default function Discipleship(): JSX.Element {
+export default function Discipleship() {
   return (
     <div className="relative min-h-screen bg-white dark:bg-slate-900">
       {/* Background Pattern */}
@@ -10,17 +12,17 @@ export default function Discipleship(): JSX.Element {
         {/* ...no background gradients... */}
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-8 lg:py-24">
+      <div className={APP_STYLES.sectionContainer}>
         {/* Header Section */}
-        <div className="mb-16 text-center lg:mb-20">
-          <h1 className="mb-6 font-monaSans text-4xl font-bold text-slate-900 dark:text-white md:text-6xl lg:text-7xl">
+        <div className={APP_STYLES.sectionHeader}>
+          <h1 className={APP_STYLES.pageTitle}>
             JOIN{" "}
             <span className="relative inline-block">
               <span>DISCIPLESHIP</span>
               {/* Remove gradient highlight */}
             </span>
           </h1>
-          <p className="mx-auto max-w-3xl text-lg text-slate-600 dark:text-slate-300 md:text-xl">
+          <p className={APP_STYLES.pageSubtitle}>
             Grow deeper in your faith through meaningful relationships and
             intentional spiritual growth
           </p>
@@ -66,7 +68,7 @@ export default function Discipleship(): JSX.Element {
               <div className="h-1 w-16 rounded-full bg-slate-300 dark:bg-slate-700"></div>
             </div>
 
-            <div className="space-y-4 font-barlow text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+            <div className={APP_STYLES.bodyText}>
               <p>
                 Our discipleship program is designed to help believers grow
                 deeper in their relationship with Jesus Christ through
@@ -90,11 +92,11 @@ export default function Discipleship(): JSX.Element {
             {/* Call to Action */}
             <div className="pt-6">
               <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <button className="inline-flex items-center justify-center rounded-lg bg-primarypcfc px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-800">
+                <button className={APP_STYLES.primaryButton}>
                   Join Program
                 </button>
-                <button className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700">
-                  Learn More
+                <button className={APP_STYLES.secondaryButton}>
+                  {SITE_COPY.cta.learnMore}
                 </button>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import { ContainerTextFlip } from "@/components/ui/text-flip";
 
-export default function MainHero(): JSX.Element {
+export default function MainHero() {
   const words = ["loved", "accepted", "prayed for"];
 
   return (

@@ -1,4 +1,6 @@
+import { SITE_COPY } from "@/lib/constants/site-copy";
 import { imgLink } from "@/lib/data/teamMembers";
+import { APP_STYLES } from "@/lib/styles/app-shared";
 import Image from "next/image";
 
 export default function Baptism() {
@@ -9,13 +11,11 @@ export default function Baptism() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1),transparent_70%)]"></div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-8 lg:py-24">
+      <div className={APP_STYLES.sectionContainer}>
         {/* Header Section */}
-        <div className="mb-16 text-center lg:mb-20">
-          <h1 className="mb-6 font-monaSans text-4xl font-bold text-slate-900 dark:text-white md:text-6xl lg:text-7xl">
-            GET BAPTIZED
-          </h1>
-          <p className="mx-auto max-w-3xl text-lg text-slate-600 dark:text-slate-300 md:text-xl">
+        <div className={APP_STYLES.sectionHeader}>
+          <h1 className={APP_STYLES.pageTitle}>GET BAPTIZED</h1>
+          <p className={APP_STYLES.pageSubtitle}>
             Take the next step in your faith journey through this beautiful act
             of obedience
           </p>
@@ -84,7 +84,7 @@ export default function Baptism() {
                   </h2>
                 </div>
 
-                <div className="space-y-4 font-barlow text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+                <div className={APP_STYLES.bodyText}>
                   <p>
                     Baptism is a beautiful and significant step in your faith
                     journey, representing your decision to follow Jesus Christ
@@ -112,8 +112,8 @@ export default function Baptism() {
                     <button className="inline-flex transform items-center justify-center rounded-lg bg-primarypcfc px-8 py-3 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:opacity-90">
                       Schedule Baptism
                     </button>
-                    <button className="inline-flex items-center justify-center rounded-lg border-2 border-slate-300 bg-white px-8 py-3 text-base font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600">
-                      Learn More
+                    <button className={APP_STYLES.secondaryButton}>
+                      {SITE_COPY.cta.learnMore}
                     </button>
                   </div>
                 </div>
