@@ -11,7 +11,7 @@ const GivingMethodCard = ({
   title,
   description,
 }: {
-  icon: ReactElement;
+  icon: ReactElement<React.SVGProps<SVGSVGElement>>;
   title: string;
   description: string;
 }) => (

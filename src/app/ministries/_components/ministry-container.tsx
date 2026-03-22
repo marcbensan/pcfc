@@ -4,7 +4,7 @@ export default function MinistryContainer({
   icon,
   ministry,
   description,
-}: Ministry): JSX.Element {
+}: Ministry) {
   return (
     <div className="flex max-w-52 flex-col items-center justify-center space-y-4 text-center">
       <div className="h-16 w-16">{icon}</div>

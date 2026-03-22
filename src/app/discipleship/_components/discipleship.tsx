@@ -3,7 +3,7 @@ import { imgLink } from "@/lib/data/teamMembers";
 import { APP_STYLES } from "@/lib/styles/app-shared";
 import Image from "next/image";
 
-export default function Discipleship(): JSX.Element {
+export default function Discipleship() {
   return (
     <div className="relative min-h-screen bg-white dark:bg-slate-900">
       {/* Background Pattern */}

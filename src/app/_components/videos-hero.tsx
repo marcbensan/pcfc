@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function VideosHero({
   videos,
-}: Readonly<{ videos: YoutubeApiResponse }>): JSX.Element {
+}: Readonly<{ videos: YoutubeApiResponse }>) {
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-US", {
       month: "short",

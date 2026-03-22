@@ -2,7 +2,7 @@ import { Button } from "@/components/button-catalyst";
 import { SITE_COPY } from "@/lib/constants/site-copy";
 import { ClockIcon, MapPinIcon, PlayIcon } from "@heroicons/react/24/outline";
 
-export default function TimesHero(): JSX.Element {
+export default function TimesHero() {
   return (
     <div className="flex w-full justify-center bg-tertiarypcfc px-24">
       <div className="flex w-full flex-col justify-between space-y-8 py-12 font-monaSans md:flex-row md:space-y-0">

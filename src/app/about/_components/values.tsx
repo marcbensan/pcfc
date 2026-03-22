@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { values } from "@/lib/data/values";
 
-export default function Values(): JSX.Element {
+export default function Values() {
   return (
     <section className="diagonal-section-bottom relative z-[1] bg-primarypcfc">
       <div className="space-y-16 py-44 md:mx-24">
