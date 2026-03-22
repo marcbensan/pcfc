@@ -1,6 +1,8 @@
 "use client";
 
+import { SITE_COPY } from "@/lib/constants/site-copy";
 import { ministries } from "@/lib/data/ministries";
+import { APP_STYLES } from "@/lib/styles/app-shared";
 import { useEffect, useRef, useState } from "react";
 import MinistryContainer from "./ministry-container";
 
@@ -113,12 +115,12 @@ export default function Ministries() {
               and beyond.
             </p>
           </div>
-          <div className="relative flex items-center py-5">
-            <div className="hidden flex-grow border-4 border-t border-zinc-600 md:flex"></div>
+          <div className={APP_STYLES.sectionDivider}>
+            <div className={APP_STYLES.sectionDividerLine}></div>
             <p className="mx-2 flex-shrink text-center font-barlow text-4xl font-semibold md:text-7xl lg:mx-8">
-              MINISTRIES YOU CAN JOIN
+              {SITE_COPY.labels.ministriesYouCanJoin}
             </p>
-            <div className="hidden flex-grow border-4 border-t border-zinc-600 md:block"></div>
+            <div className={APP_STYLES.sectionDividerLineAlt}></div>
           </div>
 
           <div className="grid place-items-center gap-y-32 md:grid-cols-3 md:px-32">

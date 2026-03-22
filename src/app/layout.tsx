@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-// import NavigationMenu from "./_components/navbar";
+import NavigationMenu from "./_components/navbar";
 import "./globals.css";
-import "@mantine/core/styles.css";
-
-import {
-  ColorSchemeScript,
-  MantineProvider,
-  mantineHtmlProps,
-} from "@mantine/core";
 
 export const metadata: Metadata = {
   title: "PCFC",
-  description: "Praise Christian Family Church",
+  description: "Praise Christian Family Crhuch",
 };
 
 export default function RootLayout({
@@ -20,10 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en">
       <head>
-        <ColorSchemeScript />
-
         {/* title font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -61,8 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
-        {/* <NavigationMenu>{children}</NavigationMenu> */}
+        <NavigationMenu>{children}</NavigationMenu>
       </body>
     </html>
   );

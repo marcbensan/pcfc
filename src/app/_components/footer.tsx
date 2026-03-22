@@ -1,3 +1,4 @@
+import { SITE_COPY } from "@/lib/constants/site-copy";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,10 +9,10 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between space-y-8 md:flex-row md:space-y-0">
           <div className="space-y-4 text-center md:text-left">
             <h2 className="font-logo text-4xl font-bold text-white md:text-5xl">
-              GET IN TOUCH
+              {SITE_COPY.footer.heading}
             </h2>
-            <p className="mt- text-sm text-gray-300">
-              Follow us on social media to stay updated.
+            <p className="mt-1 text-sm text-gray-300">
+              {SITE_COPY.footer.subheading}
             </p>
           </div>
           <div className="flex space-x-6 text-white">

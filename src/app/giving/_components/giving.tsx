@@ -1,5 +1,7 @@
 "use client";
 
+import { SITE_COPY } from "@/lib/constants/site-copy";
+import { APP_STYLES } from "@/lib/styles/app-shared";
 import { Building, Gift, Globe, Smartphone } from "lucide-react";
 import Link from "next/link";
 import React, { ReactElement } from "react";
@@ -78,7 +80,7 @@ export default function Giving() {
                 }
                 className="rounded-xl bg-secondarypcfc px-8 py-4 font-barlow text-lg font-bold text-primarypcfc transition-colors duration-300 hover:bg-secondarypcfc/80"
               >
-                GIVE NOW
+                {SITE_COPY.cta.giveNow}
               </Link>
             </div>
           </div>
@@ -116,12 +118,12 @@ export default function Giving() {
 
           {/* Giving Methods Section */}
           <div className="space-y-16 text-center">
-            <div className="relative flex items-center py-5">
-              <div className="hidden flex-grow border-4 border-t border-zinc-600 md:flex" />
-              <h2 className="mx-2 flex-shrink text-center font-barlow text-4xl font-semibold md:text-6xl lg:mx-8">
-                WAYS TO GIVE
+            <div className={APP_STYLES.sectionDivider}>
+              <div className={APP_STYLES.sectionDividerLine} />
+              <h2 className={APP_STYLES.sectionDividerTitle}>
+                {SITE_COPY.labels.waysToGive}
               </h2>
-              <div className="hidden flex-grow border-4 border-t border-zinc-600 md:block" />
+              <div className={APP_STYLES.sectionDividerLineAlt} />
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -159,15 +161,15 @@ export default function Giving() {
               QUESTIONS ABOUT GIVING?
             </h3>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-              We're here to help! If you have any questions about giving,
+              We&apos;re here to help! If you have any questions about giving,
               setting up recurring donations, or need assistance with our giving
-              platform, please don't hesitate to reach out.
+              platform, please don&apos;t hesitate to reach out.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <button className="rounded-xl bg-primarypcfc px-6 py-3 font-bold text-white transition-colors duration-300 hover:bg-blue-900">
-                Contact Us
+              <button className={APP_STYLES.ctaRoundedPrimary}>
+                {SITE_COPY.cta.contactUs}
               </button>
-              <button className="rounded-xl border-2 border-primarypcfc px-6 py-3 font-bold text-primarypcfc transition-colors duration-300 hover:bg-primarypcfc hover:text-white">
+              <button className={APP_STYLES.ctaRoundedOutline}>
                 Call (555) 123-4567
               </button>
             </div>
